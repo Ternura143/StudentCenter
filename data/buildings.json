@@ -1,0 +1,464 @@
+[
+  {
+    "levels": [
+      {
+        "father": {
+          "$ref": "$[0]"
+        },
+        "name": "1层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [
+              {
+                "father": {
+                  "$ref": "$[0].levels[0].rooms[0]"
+                },
+                "name": "3"
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[0].rooms[0]"
+                },
+                "name": "5",
+                "owner": {
+                  "id": "2107202218"
+                }
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[0].rooms[0]"
+                },
+                "name": "1",
+                "owner": {
+                  "id": "2107202218"
+                }
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[0].rooms[0]"
+                },
+                "name": "2"
+              }
+            ],
+            "father": {
+              "$ref": "$[0].levels[0]"
+            },
+            "maxCapacity": 0,
+            "name": "101",
+            "resCapacity": 0,
+            "studyRoom": false,
+            "studyType": 0
+          },
+          {
+            "applicationList": [
+              {
+                "applier": {
+                  "category": "Computer Science",
+                  "courseID": "E245",
+                  "courseName": "Deep learning",
+                  "id": "1",
+                  "score": "91"
+                },
+                "durationTime": 3600000,
+                "room": {
+                  "$ref": "$[0].levels[0].rooms[1]"
+                },
+                "startTime": 1684941086490
+              },
+              {
+                "applier": {
+                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
+                },
+                "durationTime": 3600000,
+                "room": {
+                  "$ref": "$[0].levels[0].rooms[1]"
+                },
+                "startTime": 1684941093378
+              },
+              {
+                "applier": {
+                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
+                },
+                "durationTime": 3600000,
+                "room": {
+                  "$ref": "$[0].levels[0].rooms[1]"
+                },
+                "startTime": 1684941096655
+              }
+            ],
+            "beds": [],
+            "father": {
+              "$ref": "$[0].levels[0]"
+            },
+            "maxCapacity": 3,
+            "name": "102",
+            "resCapacity": 0,
+            "studyRoom": true,
+            "studyType": 864937947
+          },
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[0].levels[0]"
+            },
+            "maxCapacity": 8,
+            "name": "103",
+            "resCapacity": 8,
+            "studyRoom": true,
+            "studyType": -1689201074
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[0]"
+        },
+        "name": "2层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [
+              {
+                "father": {
+                  "$ref": "$[0].levels[1].rooms[0]"
+                },
+                "name": "1"
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[1].rooms[0]"
+                },
+                "name": "2"
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[1].rooms[0]"
+                },
+                "name": "4"
+              },
+              {
+                "father": {
+                  "$ref": "$[0].levels[1].rooms[0]"
+                },
+                "name": "5"
+              }
+            ],
+            "father": {
+              "$ref": "$[0].levels[1]"
+            },
+            "maxCapacity": 0,
+            "name": "201",
+            "resCapacity": 0,
+            "studyRoom": false,
+            "studyType": 0
+          },
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[0].levels[1]"
+            },
+            "maxCapacity": 10,
+            "name": "202",
+            "resCapacity": 10,
+            "studyRoom": true,
+            "studyType": 102843
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[0]"
+        },
+        "name": "3层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[0].levels[2]"
+            },
+            "maxCapacity": 5,
+            "name": "301",
+            "resCapacity": 5,
+            "studyRoom": true,
+            "studyType": 1875385411
+          },
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[0].levels[2]"
+            },
+            "maxCapacity": 3,
+            "name": "302",
+            "resCapacity": 3,
+            "studyRoom": true,
+            "studyType": -1689201074
+          }
+        ]
+      }
+    ],
+    "name": "1号楼"
+  },
+  {
+    "levels": [
+      {
+        "father": {
+          "$ref": "$[1]"
+        },
+        "name": "1层",
+        "rooms": [
+          {
+            "applicationList": [
+              {
+                "applier": {
+                  "category": "Computer Science",
+                  "courseID": "E245",
+                  "courseName": "Deep learning",
+                  "id": "1",
+                  "score": "91"
+                },
+                "durationTime": 7200000,
+                "room": {
+                  "$ref": "$[1].levels[0].rooms[0]"
+                },
+                "startTime": 1684940464774
+              }
+            ],
+            "beds": [],
+            "father": {
+              "$ref": "$[1].levels[0]"
+            },
+            "maxCapacity": 5,
+            "name": "101",
+            "resCapacity": 4,
+            "studyRoom": true,
+            "studyType": 864937947
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[1]"
+        },
+        "name": "2层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[1].levels[1]"
+            },
+            "maxCapacity": 5,
+            "name": "201",
+            "resCapacity": 5,
+            "studyRoom": true,
+            "studyType": 1875385411
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[1]"
+        },
+        "name": "3层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[1].levels[2]"
+            },
+            "maxCapacity": 10,
+            "name": "301",
+            "resCapacity": 10,
+            "studyRoom": true,
+            "studyType": -1689201074
+          }
+        ]
+      }
+    ],
+    "name": "2号楼"
+  },
+  {
+    "levels": [
+      {
+        "father": {
+          "$ref": "$[2]"
+        },
+        "name": "2层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[2].levels[0]"
+            },
+            "maxCapacity": 5,
+            "name": "201",
+            "resCapacity": 5,
+            "studyRoom": true,
+            "studyType": 864937947
+          }
+        ]
+      }
+    ],
+    "name": "3号楼"
+  },
+  {
+    "levels": [
+      {
+        "father": {
+          "$ref": "$[3]"
+        },
+        "name": "1层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [
+              {
+                "father": {
+                  "$ref": "$[3].levels[0].rooms[0]"
+                },
+                "name": "1"
+              },
+              {
+                "father": {
+                  "$ref": "$[3].levels[0].rooms[0]"
+                },
+                "name": "2"
+              },
+              {
+                "father": {
+                  "$ref": "$[3].levels[0].rooms[0]"
+                },
+                "name": "3"
+              },
+              {
+                "father": {
+                  "$ref": "$[3].levels[0].rooms[0]"
+                },
+                "name": "4"
+              },
+              {
+                "father": {
+                  "$ref": "$[3].levels[0].rooms[0]"
+                },
+                "name": "5"
+              }
+            ],
+            "father": {
+              "$ref": "$[3].levels[0]"
+            },
+            "maxCapacity": 0,
+            "name": "4001",
+            "resCapacity": 0,
+            "studyRoom": false,
+            "studyType": 0
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[3]"
+        },
+        "name": "2层",
+        "rooms": [
+          {
+            "applicationList": [
+              {
+                "applier": {
+                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
+                },
+                "durationTime": 3600000,
+                "room": {
+                  "$ref": "$[3].levels[1].rooms[0]"
+                },
+                "startTime": 1684941074222
+              }
+            ],
+            "beds": [],
+            "father": {
+              "$ref": "$[3].levels[1]"
+            },
+            "maxCapacity": 3,
+            "name": "4002",
+            "resCapacity": 2,
+            "studyRoom": true,
+            "studyType": -1689201074
+          }
+        ]
+      }
+    ],
+    "name": "4号楼"
+  },
+  {
+    "levels": [
+      {
+        "father": {
+          "$ref": "$[4]"
+        },
+        "name": "1层",
+        "rooms": [
+          {
+            "applicationList": [],
+            "beds": [],
+            "father": {
+              "$ref": "$[4].levels[0]"
+            },
+            "maxCapacity": 3,
+            "name": "5-101",
+            "resCapacity": 3,
+            "studyRoom": true,
+            "studyType": 1875385411
+          },
+          {
+            "applicationList": [],
+            "beds": [
+              {
+                "father": {
+                  "$ref": "$[4].levels[0].rooms[1]"
+                },
+                "name": "1",
+                "owner": {
+                  "id": "2107202218"
+                }
+              },
+              {
+                "father": {
+                  "$ref": "$[4].levels[0].rooms[1]"
+                },
+                "name": "2"
+              },
+              {
+                "father": {
+                  "$ref": "$[4].levels[0].rooms[1]"
+                },
+                "name": "3"
+              }
+            ],
+            "father": {
+              "$ref": "$[4].levels[0]"
+            },
+            "maxCapacity": 0,
+            "name": "5-102",
+            "resCapacity": 0,
+            "studyRoom": false,
+            "studyType": 0
+          }
+        ]
+      },
+      {
+        "father": {
+          "$ref": "$[4]"
+        },
+        "name": "2层",
+        "rooms": []
+      }
+    ],
+    "name": "5号楼"
+  }
+]
