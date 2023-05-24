@@ -87,7 +87,7 @@ public class LoginViewController implements Initializable {
     @FXML
     private Label Exit;
 
-    private AdminMainViewController adminMainViewController;
+//    private AdminMainViewController adminMainViewController;
     private StudentMainViewController studentMainViewController;
 /*
  * @Author DengYimo
@@ -392,25 +392,11 @@ public class LoginViewController implements Initializable {
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(100));
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [controller]
- * @Return void
- * @Since version-1.0
- */
-    public void setParentControllerAdmin(AdminMainViewController controller) {
-        adminMainViewController = controller;
-    }
-    /*
-     * @Author DengYimo
-     * @Date  5:04
-     * @Description This is description of method
-     * @Param [controller]
-     * @Return void
-     * @Since version-1.0
-     */
+
+//    public void setParentControllerAdmin(AdminMainViewController controller) {
+//        adminMainViewController = controller;
+//    }
+
     public void setParentControllerStudent(StudentMainViewController controller) {
         studentMainViewController = controller;
     }

@@ -29,12 +29,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
-/*
- * @Author DengYimo
- * @Date  5:02
- * @Description 这是稀有房屋管理界面的控制器类
- * @Since version-1.0
- */
+
 public class StudyRoomManagementViewController implements Initializable {
     private ObservableList<Room> studyRoomList = FXCollections.observableArrayList();
     @FXML

@@ -1,7 +1,6 @@
 package com.studyCenter.service;
 
 import com.studyCenter.entity.AbstractUser;
-import com.studyCenter.entity.Admin;
 import com.studyCenter.entity.Student;
 import com.studyCenter.util.FileOperator;
 
