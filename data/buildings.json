@@ -48,7 +48,7 @@
             "name": "101",
             "resCapacity": 0,
             "studyRoom": false,
-            "studyType": 0
+            "studyType": -822546269
           },
           {
             "applicationList": [
@@ -64,27 +64,7 @@
                 "room": {
                   "$ref": "$[0].levels[0].rooms[1]"
                 },
-                "startTime": 1684941086490
-              },
-              {
-                "applier": {
-                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
-                },
-                "durationTime": 3600000,
-                "room": {
-                  "$ref": "$[0].levels[0].rooms[1]"
-                },
-                "startTime": 1684941093378
-              },
-              {
-                "applier": {
-                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
-                },
-                "durationTime": 3600000,
-                "room": {
-                  "$ref": "$[0].levels[0].rooms[1]"
-                },
-                "startTime": 1684941096655
+                "startTime": 1684951618365
               }
             ],
             "beds": [],
@@ -93,9 +73,9 @@
             },
             "maxCapacity": 3,
             "name": "102",
-            "resCapacity": 0,
+            "resCapacity": 2,
             "studyRoom": true,
-            "studyType": 864937947
+            "studyType": -822546269
           },
           {
             "applicationList": [],
@@ -107,7 +87,7 @@
             "name": "103",
             "resCapacity": 8,
             "studyRoom": true,
-            "studyType": -1689201074
+            "studyType": -822546269
           }
         ]
       },
@@ -164,7 +144,7 @@
             "name": "202",
             "resCapacity": 10,
             "studyRoom": true,
-            "studyType": 102843
+            "studyType": -822546268
           }
         ]
       },
@@ -184,7 +164,7 @@
             "name": "301",
             "resCapacity": 5,
             "studyRoom": true,
-            "studyType": 1875385411
+            "studyType": -822546266
           },
           {
             "applicationList": [],
@@ -196,7 +176,7 @@
             "name": "302",
             "resCapacity": 3,
             "studyRoom": true,
-            "studyType": -1689201074
+            "studyType": -822546267
           }
         ]
       }
@@ -212,31 +192,16 @@
         "name": "1层",
         "rooms": [
           {
-            "applicationList": [
-              {
-                "applier": {
-                  "category": "Computer Science",
-                  "courseID": "E245",
-                  "courseName": "Deep learning",
-                  "id": "1",
-                  "score": "91"
-                },
-                "durationTime": 7200000,
-                "room": {
-                  "$ref": "$[1].levels[0].rooms[0]"
-                },
-                "startTime": 1684940464774
-              }
-            ],
+            "applicationList": [],
             "beds": [],
             "father": {
               "$ref": "$[1].levels[0]"
             },
             "maxCapacity": 5,
             "name": "101",
-            "resCapacity": 4,
+            "resCapacity": 5,
             "studyRoom": true,
-            "studyType": 864937947
+            "studyType": -822546269
           }
         ]
       },
@@ -256,7 +221,7 @@
             "name": "201",
             "resCapacity": 5,
             "studyRoom": true,
-            "studyType": 1875385411
+            "studyType": -822546266
           }
         ]
       },
@@ -276,7 +241,7 @@
             "name": "301",
             "resCapacity": 10,
             "studyRoom": true,
-            "studyType": -1689201074
+            "studyType": -822546267
           }
         ]
       }
@@ -301,7 +266,7 @@
             "name": "201",
             "resCapacity": 5,
             "studyRoom": true,
-            "studyType": 864937947
+            "studyType": -822546269
           }
         ]
       }
@@ -368,27 +333,16 @@
         "name": "2层",
         "rooms": [
           {
-            "applicationList": [
-              {
-                "applier": {
-                  "$ref": "$[0].levels[0].rooms[1].applicationList[0].applier"
-                },
-                "durationTime": 3600000,
-                "room": {
-                  "$ref": "$[3].levels[1].rooms[0]"
-                },
-                "startTime": 1684941074222
-              }
-            ],
+            "applicationList": [],
             "beds": [],
             "father": {
               "$ref": "$[3].levels[1]"
             },
             "maxCapacity": 3,
             "name": "4002",
-            "resCapacity": 2,
+            "resCapacity": 3,
             "studyRoom": true,
-            "studyType": -1689201074
+            "studyType": -822546267
           }
         ]
       }
@@ -413,7 +367,7 @@
             "name": "5-101",
             "resCapacity": 3,
             "studyRoom": true,
-            "studyType": 1875385411
+            "studyType": -822546266
           },
           {
             "applicationList": [],

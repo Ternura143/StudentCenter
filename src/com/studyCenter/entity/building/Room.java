@@ -10,11 +10,11 @@ import java.util.Date;
  * @Since version-1.0
  */
 public class Room implements Serializable {
-    public final static String[] RARETYPES = {"棋牌室", "健身房", "娱乐室", "浴室"};
-    public final static int GYM = "gym".hashCode();
-    public final static int BATHROOM = "bathroom".hashCode();
-    public final static int ENTERTAINMENTROOM = "ENTERTAINMENTROOM".hashCode();
-    public final static int CHESSROOM = "chessroom".hashCode();
+    public final static String[] RARETYPES = {"Study Room 1", "Study Room 2", "Study Room 3", "Study Room 4"};
+    public final static int STUDYROOMONE = "Study Room 1".hashCode();
+    public final static int STUDYROOMTWO = "Study Room 2".hashCode();
+    public final static int STUDYROOMTHREE = "Study Room 3".hashCode();
+    public final static int STUDYROOMFOUR = "Study Room 4".hashCode();
     private String name;
     private boolean isStudyRoom;
     private int maxCapacity;
@@ -24,71 +24,29 @@ public class Room implements Serializable {
     public ArrayList<StudyRoomApplication> getApplicationList() {
         return applicationList;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [applicationList]
- * @Return void
- * @Since version-1.0
- */
+
     public void setApplicationList(ArrayList<StudyRoomApplication> applicationList) {
         this.applicationList = applicationList;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return com.neusoft.entity.building.Level
- * @Since version-1.0
- */
+
     public Level getFather() {
         return father;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [father]
- * @Return void
- * @Since version-1.0
- */
+
     public void setFather(Level father) {
         this.father = father;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param 
- * @Return 
- * @Since version-1.0
- */
+
     private int StudyType;
     private ArrayList<Bed> beds;
     private Level father;
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [father]
- * @Return 
- * @Since version-1.0
- */
+
     public Room(Level father) {
         applicationList = new ArrayList<StudyRoomApplication>();
         beds = new ArrayList<Bed>();
         this.father = father;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [name, isStudyRoom, father]
- * @Return 
- * @Since version-1.0
- */
+
     public Room(String name, boolean isStudyRoom, Level father) {
         applicationList = new ArrayList<StudyRoomApplication>();
         beds = new ArrayList<Bed>();
@@ -96,90 +54,34 @@ public class Room implements Serializable {
         this.isStudyRoom = isStudyRoom;
         this.father = father;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return java.lang.String
- * @Since version-1.0
- */
+
     public String getName() {
         return name;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [name]
- * @Return void
- * @Since version-1.0
- */
+
     public void setName(String name) {
         this.name = name;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return 
- * @Since version-1.0
- */
+
     public Room() {
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return int
- * @Since version-1.0
- */
+
     public int getMaxCapacity() {
         return maxCapacity;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [maxCapacity]
- * @Return void
- * @Since version-1.0
- */
+
     public void setMaxCapacity(int maxCapacity) {
         this.maxCapacity = maxCapacity;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return int
- * @Since version-1.0
- */
+
     public int getResCapacity() {
         return resCapacity;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [resCapacity]
- * @Return void
- * @Since version-1.0
- */
+
     public void setResCapacity(int resCapacity) {
         this.resCapacity = resCapacity;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [name, isStudyRoom, studyType, father, maxCapacity, resCapacity]
- * @Return 
- * @Since version-1.0
- */
+
     public Room(String name, boolean isStudyRoom, int studyType, Level father, int maxCapacity, int resCapacity) {
         applicationList = new ArrayList<StudyRoomApplication>();
         beds = new ArrayList<Bed>();
@@ -190,121 +92,51 @@ public class Room implements Serializable {
         this.maxCapacity = maxCapacity;
         this.resCapacity = resCapacity;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return boolean
- * @Since version-1.0
- */
+
     public boolean isStudyRoom() {
         return isStudyRoom;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param [isStudyRoom]
- * @Return void
- * @Since version-1.0
- */
+
     public void setStudyRoom(boolean isStudyRoom) {
         this.isStudyRoom = isStudyRoom;
     }
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of method
- * @Param []
- * @Return int
- * @Since version-1.0
- */
+
     public int getStudyType() {
         return StudyType;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param [studyType]
- * @Return void
- * @Since version-1.0
- */
+
     public void setStudyType(int studyType) {
         StudyType = studyType;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param []
- * @Return java.util.ArrayList<com.neusoft.entity.building.Bed>
- * @Since version-1.0
- */
+
     public ArrayList<Bed> getBeds() {
         return beds;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param [beds]
- * @Return void
- * @Since version-1.0
- */
+
     public void setBeds(ArrayList<Bed> beds) {
         this.beds = beds;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param []
- * @Return java.lang.String
- * @Since version-1.0
- */
+
     public String toString() {
         return this.name;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param [s]
- * @Return int
- * @Since version-1.0
- */
+
     public static int getTypeByChinese(String s) {
-        if (s.equals("浴室")) return Room.BATHROOM;
-        if (s.equals("健身房")) return Room.GYM;
-        if (s.equals("娱乐室")) return Room.ENTERTAINMENTROOM;
-        if (s.equals("棋牌室")) return Room.CHESSROOM;
+        if (s.equals("Study Room 1")) return Room.STUDYROOMONE;
+        if (s.equals("Study Room 2")) return Room.STUDYROOMTWO;
+        if (s.equals("Study Room 3")) return Room.STUDYROOMTHREE;
+        if (s.equals("Study Room 4")) return Room.STUDYROOMFOUR;
         return -1;
     }
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of method
- * @Param [hashNum]
- * @Return java.lang.String
- * @Since version-1.0
- */
+
     public static String getType(int hashNum) {
-        if (hashNum == Room.GYM) return "健身房";
-        if (hashNum == Room.BATHROOM) return "浴室";
-        if (hashNum == Room.ENTERTAINMENTROOM) return "娱乐室";
-        if (hashNum == Room.CHESSROOM) return "棋牌室";
-        return "无";
+        if (hashNum == Room.STUDYROOMONE) return "Study Room 1";
+        if (hashNum == Room.STUDYROOMTWO) return "Study Room 2";
+        if (hashNum == Room.STUDYROOMTHREE) return "Study Room 3";
+        if (hashNum == Room.STUDYROOMFOUR) return "Study Room 4";
+        return "No";
     }
-/*
- * @Author DengYimo
- * @Date  4:54
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
+
     public void refreshApplicationTime() {
         Date now = new Date();
         for (int i = 0; i < applicationList.size(); i++) {

@@ -2,12 +2,7 @@ package com.studyCenter.entity.building;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-/*
- * @Author DengYimo
- * @Date  4:52
- * @Description This is description of class
- * @Since version-1.0
- */
+
 public class Building implements Serializable {
     private String name;
     private ArrayList<Level> levels;

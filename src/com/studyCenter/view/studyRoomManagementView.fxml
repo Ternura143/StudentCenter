@@ -57,7 +57,7 @@
             <TextField fx:id="studyApplicationTimeField" layoutX="147.0" layoutY="334.0" prefHeight="30.0" prefWidth="84.0" />
             <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" onAction="#studyRoomApplicationButtonFired" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="申请" />
             <Button layoutX="149.0" layoutY="380.0" mnemonicParsing="false" onAction="#studyRoomRefresh" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="刷新" />
-            <Label layoutX="44.0" layoutY="259.0" text="申请人：" textFill="WHITE">
+            <Label layoutX="44.0" layoutY="259.0" text="课程安排：" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
