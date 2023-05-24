@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UserManager {
     private List<Staff> staffs;
-    private  List<Admin> admins;
+//    private  List<Admin> admins;
     private AbstractUser currentUser;
     private static UserManager singletonInstance;
 
@@ -23,7 +23,7 @@ public class UserManager {
 
     private UserManager() {
         staffs =  FileOperator.loadData("Staffs.json", Staff.class);
-        admins = FileOperator.loadData("Admins.json", Admin.class);
+//        admins = FileOperator.loadData("Admins.json", Admin.class);
     }
 
     /**
