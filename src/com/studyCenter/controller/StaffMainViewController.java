@@ -34,7 +34,7 @@ public class StaffMainViewController {
     private ConstructionViewController constructionViewController;
     private AwardManagementViewController awardManagementViewController;
     private StudyRoomManagementViewController studyRoomManagementViewController;
-    private BuildingMainViewController buildingMainViewController;
+//    private BuildingMainViewController buildingMainViewController;
 //    private CheckInInfoViewController checkInInfoViewController;
 
     public void setParentControllerLogin(LoginViewController controller) {
@@ -57,9 +57,9 @@ public class StaffMainViewController {
         studyRoomManagementViewController = controller;
     }
 
-    public void setParentControllerBuilding(BuildingMainViewController controller) {
-        buildingMainViewController = controller;
-    }
+//    public void setParentControllerBuilding(BuildingMainViewController controller) {
+//        buildingMainViewController = controller;
+//    }
 
 //    public void setParentControllerCheckIn(CheckInInfoViewController controller) {
 //        checkInInfoViewController = controller;
@@ -115,8 +115,8 @@ public class StaffMainViewController {
     public void goToBuildingManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
         stage.close();
-        BuildingMainViewController controller = (BuildingMainViewController) ViewManager.newWindow("buildingMainView.fxml");
-        controller.setParentController(this);
+//        BuildingMainViewController controller = (BuildingMainViewController) ViewManager.newWindow("buildingMainView.fxml");
+//        controller.setParentController(this);
     }
 
     @FXML

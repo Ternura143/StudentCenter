@@ -16,25 +16,11 @@ public class ConstructionViewController {
     private JFXButton backToMain;
 
     private StaffMainViewController staffMainViewController;
-/*
- * @Author DengYimo
- * @Date  4:57
- * @Description This is description of method
- * @Param [controller]
- * @Return void
- * @Since version-1.0
- */
+
     public void setParentController(StaffMainViewController controller) {
         staffMainViewController = controller;
     }
-/*
- * @Author DengYimo
- * @Date  5:02
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     public void backToMainPage(MouseEvent event){
         StaffMainViewController controller = (StaffMainViewController) ViewManager.newWindow("staffMainView.fxml");
         controller.setParentControllerConstruction(this);
