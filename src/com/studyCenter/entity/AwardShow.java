@@ -1,10 +1,5 @@
 package com.studyCenter.entity;
-/*
- * @Author DengYimo
- * @Date  4:33
- * @Description This is description of class
- * @Since version-1.0
- */
+
 public class AwardShow {
     private String id;
     private String content;
