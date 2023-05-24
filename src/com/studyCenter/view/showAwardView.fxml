@@ -39,19 +39,19 @@
             </TableView>
          </children>
       </Pane>
-      <Label fx:id="exitLabel" alignment="CENTER" layoutX="511.0" onMouseClicked="#close" prefHeight="62.0" prefWidth="61.0" styleClass="exitLabel" stylesheets="@settingStaff.css" text="X" textFill="#ddd9d9">
+      <Label fx:id="exitLabel" alignment="CENTER" layoutX="511.0" onMouseClicked="#close" prefHeight="62.0" prefWidth="61.0" styleClass="exitLabel" stylesheets="@settingStudent.css" text="X" textFill="#ddd9d9">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
       <HBox layoutX="125.0" layoutY="598.0" prefHeight="42.0" prefWidth="324.0" spacing="100.0">
          <children>
-            <JFXButton fx:id="cancelBtn" buttonType="RAISED" onMouseClicked="#newProblem" prefHeight="42.0" prefWidth="110.0" styleClass="addBtn" stylesheets="@settingStaff.css" text="ADD" textFill="WHITE">
+            <JFXButton fx:id="cancelBtn" buttonType="RAISED" onMouseClicked="#newProblem" prefHeight="42.0" prefWidth="110.0" styleClass="addBtn" stylesheets="@settingStudent.css" text="ADD" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="saveBtn" buttonType="RAISED" onMouseClicked="#close" prefHeight="42.0" prefWidth="110.0" styleClass="saveBtn" stylesheets="@settingStaff.css" text="SAVE" textFill="WHITE">
+            <JFXButton fx:id="saveBtn" buttonType="RAISED" onMouseClicked="#close" prefHeight="42.0" prefWidth="110.0" styleClass="saveBtn" stylesheets="@settingStudent.css" text="SAVE" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

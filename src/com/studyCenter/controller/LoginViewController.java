@@ -51,25 +51,25 @@ public class LoginViewController implements Initializable {
     @FXML
     private Label s3;
     @FXML
-    private JFXButton toStaffPage;
+    private JFXButton toStudentPage;
     @FXML
-    private Label staffTitle;
+    private Label studentTitle;
     @FXML
     private Label adminTitle;
     @FXML
-    private Label staffTips;
+    private Label studentTips;
     @FXML
     private Label adminTips;
     @FXML
-    private JFXButton staffLoginBtn;
+    private JFXButton studentLoginBtn;
     @FXML
     private JFXButton adminLoginBtn;
     @FXML
-    private TextField staffUsername;
+    private TextField studentUsername;
     @FXML
-    private Label staffPWForgot;
+    private Label studentPWForgot;
     @FXML
-    private PasswordField staffPassword;
+    private PasswordField studentPassword;
     @FXML
     private TextField adminUserName;
     @FXML
@@ -88,7 +88,7 @@ public class LoginViewController implements Initializable {
     private Label Exit;
 
     private AdminMainViewController adminMainViewController;
-    private StaffMainViewController staffMainViewController;
+    private StudentMainViewController studentMainViewController;
 /*
  * @Author DengYimo
  * @Date  4:58
@@ -102,16 +102,16 @@ public class LoginViewController implements Initializable {
         s1.setVisible(false);
         s2.setVisible(false);
         s3.setVisible(false);
-        toStaffPage.setVisible(false);
+        toStudentPage.setVisible(false);
         adminTips.setVisible(false);
         adminTitle.setVisible(false);
         adminLoginBtn.setVisible(false);
         adminUserName.setVisible(false);
         adminPassword.setVisible(false);
         adminPWForgot.setVisible(false);
-        staffUsername.setVisible(true);
-        staffPWForgot.setVisible(true);
-        staffPassword.setVisible(true);
+        studentUsername.setVisible(true);
+        studentPWForgot.setVisible(true);
+        studentPassword.setVisible(true);
     }
 /*
  * @Author DengYimo
@@ -138,7 +138,7 @@ public class LoginViewController implements Initializable {
         s1.setVisible(true);
         s2.setVisible(true);
         s3.setVisible(true);
-        toStaffPage.setVisible(true);
+        toStudentPage.setVisible(true);
         l1.setVisible(false);
         l2.setVisible(false);
         l3.setVisible(false);
@@ -147,15 +147,15 @@ public class LoginViewController implements Initializable {
         otherAccess2.setStyle("-fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8); -fx-background-radius: 300");
         otherAccess3.setStyle("-fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8); -fx-background-radius: 300");
         toAdminPage.setVisible(false);
-        staffTips.setVisible(false);
-        staffTitle.setVisible(false);
-        staffLoginBtn.setVisible(false);
+        studentTips.setVisible(false);
+        studentTitle.setVisible(false);
+        studentLoginBtn.setVisible(false);
         adminUserName.setVisible(true);
         adminPassword.setVisible(true);
         adminPWForgot.setVisible(true);
-        staffUsername.setVisible(false);
-        staffPWForgot.setVisible(false);
-        staffPassword.setVisible(false);
+        studentUsername.setVisible(false);
+        studentPWForgot.setVisible(false);
+        studentPassword.setVisible(false);
 
         slide.setOnFinished((e->{
         }));
@@ -185,7 +185,7 @@ public class LoginViewController implements Initializable {
         s1.setVisible(false);
         s2.setVisible(false);
         s3.setVisible(false);
-        toStaffPage.setVisible(false);
+        toStudentPage.setVisible(false);
         l1.setVisible(true);
         l2.setVisible(true);
         l3.setVisible(true);
@@ -194,15 +194,15 @@ public class LoginViewController implements Initializable {
         otherAccess2.setStyle("-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 300");
         otherAccess3.setStyle("-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 300");
         toAdminPage.setVisible(true);
-        staffTips.setVisible(true);
-        staffTitle.setVisible(true);
-        staffLoginBtn.setVisible(true);
+        studentTips.setVisible(true);
+        studentTitle.setVisible(true);
+        studentLoginBtn.setVisible(true);
         adminUserName.setVisible(false);
         adminPassword.setVisible(false);
         adminPWForgot.setVisible(false);
-        staffUsername.setVisible(true);
-        staffPWForgot.setVisible(true);
-        staffPassword.setVisible(true);
+        studentUsername.setVisible(true);
+        studentPWForgot.setVisible(true);
+        studentPassword.setVisible(true);
 
         slide.setOnFinished((e->{
         }));
@@ -216,13 +216,13 @@ public class LoginViewController implements Initializable {
  * @Since version-1.0
  */
     @FXML
-    private void staffLoginBtn() {
-        if("staff".equals(staffUsername.getText())||"user".equals(staffUsername.getText())||"西天主".equals(staffUsername.getText())||"红孩儿".equals(staffUsername.getText())||"牛魔王".equals(staffUsername.getText())||"孙悟空".equals(staffUsername.getText())&&"123456".equals(staffPassword.getText())){
-            staffSign();
+    private void studentLoginBtn() {
+        if("student".equals(studentUsername.getText())||"user".equals(studentUsername.getText())||"西天主".equals(studentUsername.getText())||"红孩儿".equals(studentUsername.getText())||"牛魔王".equals(studentUsername.getText())||"孙悟空".equals(studentUsername.getText())&&"123456".equals(studentPassword.getText())){
+            studentSign();
             Stage stage = (Stage)Exit.getScene().getWindow();
             stage.close();
             String tilte = "Sign In";
-            String message = staffUsername.getText() + " log in!";
+            String message = studentUsername.getText() + " log in!";
             TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
 
@@ -231,9 +231,9 @@ public class LoginViewController implements Initializable {
             tray.setMessage(message);
             tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(3000));
-        }else if (!"staff".equals(staffUsername.getText()) || !"123456".equals(staffPassword.getText())){
+        }else if (!"student".equals(studentUsername.getText()) || !"123456".equals(studentPassword.getText())){
             String tilte = "Sign In";
-            String message = "Error Staff Information ";
+            String message = "Error Student Information ";
             TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
 
@@ -245,26 +245,12 @@ public class LoginViewController implements Initializable {
         }
 
     }
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
-    private void staffSign() {
-        StaffMainViewController controller = (StaffMainViewController) ViewManager.newWindow("staffMainView.fxml");
+
+    private void studentSign() {
+        StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerLogin(this);
     }
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
+
 
 //    private void adminSign() {
 //        AdminMainViewController controller = (AdminMainViewController) ViewManager.newWindow("adminMainView.fxml");
@@ -326,9 +312,9 @@ public class LoginViewController implements Initializable {
  * @Since version-1.0
  */
     @FXML
-    void enterPressedStaff(KeyEvent event) throws Exception {
+    void enterPressedStudent(KeyEvent event) throws Exception {
         if(event.getCode() == KeyCode.ENTER) {
-            staffLoginBtn();
+            studentLoginBtn();
         }
     }
 /*
@@ -396,13 +382,13 @@ public class LoginViewController implements Initializable {
  * @Since version-1.0
  */
     @FXML
-    public void forgotRemindStaff(MouseEvent event) {
+    public void forgotRemindStudent(MouseEvent event) {
         TrayNotification tray = new TrayNotification();
         AnimationType type = AnimationType.FADE;
 
         tray.setAnimationType(type);
         tray.setTitle("默认员工");
-        tray.setMessage("账号: staff\n密码: 123456");
+        tray.setMessage("账号: student\n密码: 123456");
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(100));
     }
@@ -425,8 +411,8 @@ public class LoginViewController implements Initializable {
      * @Return void
      * @Since version-1.0
      */
-    public void setParentControllerStaff(StaffMainViewController controller) {
-        staffMainViewController = controller;
+    public void setParentControllerStudent(StudentMainViewController controller) {
+        studentMainViewController = controller;
     }
 
 }

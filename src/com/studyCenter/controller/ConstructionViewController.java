@@ -15,14 +15,14 @@ public class ConstructionViewController {
     @FXML
     private JFXButton backToMain;
 
-    private StaffMainViewController staffMainViewController;
+    private StudentMainViewController studentMainViewController;
 
-    public void setParentController(StaffMainViewController controller) {
-        staffMainViewController = controller;
+    public void setParentController(StudentMainViewController controller) {
+        studentMainViewController = controller;
     }
 
     public void backToMainPage(MouseEvent event){
-        StaffMainViewController controller = (StaffMainViewController) ViewManager.newWindow("staffMainView.fxml");
+        StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerConstruction(this);
         Stage currentStage = (Stage) backToMain.getScene().getWindow();
         currentStage.close();

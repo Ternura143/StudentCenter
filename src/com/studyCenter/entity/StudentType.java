@@ -9,9 +9,9 @@ import java.util.List;
  * @Description This is description of class
  * @Since version-1.0
  */
-public class StaffType {
+public class StudentType {
     private final List<Type> types;
-    private static StaffType singletonInstance;
+    private static StudentType singletonInstance;
 
     // 实现单例模式：只有一个DeviceType被创建
     /*
@@ -19,12 +19,12 @@ public class StaffType {
      * @Date  4:35
      * @Description This is description of method
      * @Param []
-     * @Return com.neusoft.entity.StaffType
+     * @Return com.neusoft.entity.StudentType
      * @Since version-1.0
      */
-    public static StaffType getInstance() {
+    public static StudentType getInstance() {
         if (singletonInstance == null) {
-            singletonInstance = new StaffType();
+            singletonInstance = new StudentType();
         }
         return singletonInstance;
     }
@@ -36,7 +36,7 @@ public class StaffType {
  * @Return
  * @Since version-1.0
  */
-    private StaffType() {
+    private StudentType() {
         types = FileOperator.loadData("Types.json", Type.class);
     }
 /*

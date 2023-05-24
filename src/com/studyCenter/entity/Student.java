@@ -5,14 +5,14 @@ package com.studyCenter.entity;
  * @Description This is description of class
  * @Since version-1.0
  */
-public class Staff extends AbstractUser {
+public class Student extends AbstractUser {
     private String birthday;
     private String specialty;
     private String title;
     private String contact;
     private String id;
 
-    public Staff(String account, String password, String name, String birthday, String specialty, String title, String contact, String id) {
+    public Student(String account, String password, String name, String birthday, String specialty, String title, String contact, String id) {
         super(account, password, name);
         this.birthday = birthday;
         this.specialty = specialty;

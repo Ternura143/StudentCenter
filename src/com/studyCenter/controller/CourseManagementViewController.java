@@ -61,7 +61,7 @@ public class CourseManagementViewController implements Initializable {
 
     private List<Course> searchedList = new ArrayList<Course>();
 
-    private StaffMainViewController staffMainViewController;
+    private StudentMainViewController studentMainViewController;
 //    private EvaluateViewController evaluateViewController;
 
     private ObservableList<Course> courseObservableList = FXCollections.observableArrayList();
@@ -140,8 +140,8 @@ public class CourseManagementViewController implements Initializable {
             delWarning.setTitle("");
             Optional<ButtonType> op = delWarning.showAndWait();
             if (op.get() == ButtonType.OK) {
-                for (Course selectedStaffSingle : tableView.getSelectionModel().getSelectedItems()) {
-                    CourseManager.getInstance().removeCourse(selectedStaffSingle);
+                for (Course selectedStudentSingle : tableView.getSelectionModel().getSelectedItems()) {
+                    CourseManager.getInstance().removeCourse(selectedStudentSingle);
                 }
                 initialize(null, null);
             }
@@ -183,8 +183,8 @@ public class CourseManagementViewController implements Initializable {
         searchText.setText("");
     }
 
-    public void setParentController(StaffMainViewController controller) {
-        staffMainViewController = controller;
+    public void setParentController(StudentMainViewController controller) {
+        studentMainViewController = controller;
     }
 
 //    public void setParentControllerEva(EvaluateViewController controller) {
@@ -192,7 +192,7 @@ public class CourseManagementViewController implements Initializable {
 //    }
 
     public void backToMainPage(MouseEvent event) {
-        StaffMainViewController controller = (StaffMainViewController) ViewManager.newWindow("staffMainView.fxml");
+        StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerCourseManagement(this);
         Stage currentStage = (Stage) backToMain.getScene().getWindow();
         currentStage.close();

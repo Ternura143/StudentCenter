@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
  * @Description 这是员工信息修改界面的控制器类
  * @Since version-1.0
  */
-public class NewStaffSettingViewController implements Initializable {
+public class NewStudentSettingViewController implements Initializable {
     @FXML
     private TextField nameField;
     @FXML
@@ -43,7 +43,7 @@ public class NewStaffSettingViewController implements Initializable {
     private CheckBox checkBox;
 
     private AdminMainViewController adminMainViewController;
-    private Staff inStaff;
+    private Student inStudent;
     private final Type defaultType = new Type("无");
 /*
  * @Author DengYimo
@@ -87,11 +87,11 @@ public class NewStaffSettingViewController implements Initializable {
                 alert.show();
                 return;
             }
-            if (inStaff != null) {
-                UserManager.getInstance().removeStaff(inStaff);
+            if (inStudent != null) {
+                UserManager.getInstance().removeStudent(inStudent);
             }
-            UserManager.getInstance().addStaff(new Staff(username, password, name, birthday, special, type, contact, id));
-            Alert info = new Alert(Alert.AlertType.INFORMATION, "员工账号-"+ inStaff.getName() +"-已修改");
+            UserManager.getInstance().addStudent(new Student(username, password, name, birthday, special, type, contact, id));
+            Alert info = new Alert(Alert.AlertType.INFORMATION, "员工账号-"+ inStudent.getName() +"-已修改");
             info.showAndWait();
             adminMainViewController.initialize(null, null);
             Stage currentStage = (Stage) exitLabel.getScene().getWindow();
@@ -113,7 +113,7 @@ public class NewStaffSettingViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<Type> typeObservableList = FXCollections.observableArrayList();
-        List<Type> types = StaffType.getInstance().getTypes();
+        List<Type> types = StudentType.getInstance().getTypes();
         typeObservableList.addAll(types);
         titleComboBox.setItems(typeObservableList);
         titleComboBox.setValue(defaultType);
@@ -122,19 +122,19 @@ public class NewStaffSettingViewController implements Initializable {
      * @Author DengYimo
      * @Date  5:00
      * @Description This is description of method
-     * @Param [staff]
+     * @Param [student]
      * @Return void
      * @Since version-1.0
      */
-    public void setStaff(Staff staff) {
-        inStaff = staff;
-        nameField.setText(staff.getName());
-        birthdayField.setText(staff.getBirthday());
-        specialField.setText(staff.getSpecialty());
-        contactField.setText(staff.getContact());
-        idField.setText(staff.getId());
-        usernameField.setText(staff.getAccount());
-        passwordField.setText(staff.getPassword());
+    public void setStudent(Student student) {
+        inStudent = student;
+        nameField.setText(student.getName());
+        birthdayField.setText(student.getBirthday());
+        specialField.setText(student.getSpecialty());
+        contactField.setText(student.getContact());
+        idField.setText(student.getId());
+        usernameField.setText(student.getAccount());
+        passwordField.setText(student.getPassword());
     }
 /*
  * @Author DengYimo

@@ -2,13 +2,13 @@ package com.studyCenter.service;
 
 import com.studyCenter.entity.AbstractUser;
 import com.studyCenter.entity.Admin;
-import com.studyCenter.entity.Staff;
+import com.studyCenter.entity.Student;
 import com.studyCenter.util.FileOperator;
 
 import java.util.List;
 
 public class UserManager {
-    private List<Staff> staffs;
+    private List<Student> students;
 //    private  List<Admin> admins;
     private AbstractUser currentUser;
     private static UserManager singletonInstance;
@@ -22,7 +22,7 @@ public class UserManager {
     }
 
     private UserManager() {
-        staffs =  FileOperator.loadData("Staffs.json", Staff.class);
+        students =  FileOperator.loadData("Students.json", Student.class);
 //        admins = FileOperator.loadData("Admins.json", Admin.class);
     }
 
@@ -42,10 +42,10 @@ public class UserManager {
 //                }
 //            }
 //        }
-        if (role == 2) {    // Staff
-            for (Staff localStaff : staffs) {
-                if (localStaff.getAccount().equals(account) && localStaff.getPassword().equals(password)) {
-                    currentUser = localStaff;
+        if (role == 2) {    // Student
+            for (Student localStudent : students) {
+                if (localStudent.getAccount().equals(account) && localStudent.getPassword().equals(password)) {
+                    currentUser = localStudent;
                     return true;
                 }
             }
@@ -63,13 +63,13 @@ public class UserManager {
 //        return true;
 //    }
 
-    public boolean addStaff(Staff staff) {
-        for (Staff localStaff : staffs) {
-            if (staff.getAccount().equals(localStaff.getAccount()))
+    public boolean addStudent(Student student) {
+        for (Student localStudent : students) {
+            if (student.getAccount().equals(localStudent.getAccount()))
                 return false;
         }
-        staffs.add(staff);
-        FileOperator.writeData(staffs, "Staffs.json");
+        students.add(student);
+        FileOperator.writeData(students, "Students.json");
         return true;
     }
 
@@ -78,25 +78,25 @@ public class UserManager {
 //            admins.remove(user);
 //            FileOperator.writeData(admins, "Admins.json");
 //            return true;
-//        } else if (user.getClass() == Staff.class) {
-//            staffs.remove(user);
-//            FileOperator.writeData(staffs, "Admins.json");
+//        } else if (user.getClass() == Student.class) {
+//            students.remove(user);
+//            FileOperator.writeData(students, "Admins.json");
 //            return true;
 //        }
 //        return false;
 //    }
 
-    public boolean removeStaff(AbstractUser user) {
-        if (user.getClass() == Staff.class) {
-            staffs.remove(user);
-            FileOperator.writeData(staffs, "Staffs.json");
+    public boolean removeStudent(AbstractUser user) {
+        if (user.getClass() == Student.class) {
+            students.remove(user);
+            FileOperator.writeData(students, "Students.json");
             return true;
         }
         return false;
     }
 
-    public List<Staff> getStaffs() {
-        return staffs;
+    public List<Student> getStudents() {
+        return students;
     }
 
 //    public AbstractUser getCurrentUser() {

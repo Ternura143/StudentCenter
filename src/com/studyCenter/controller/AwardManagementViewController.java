@@ -39,13 +39,13 @@ public class AwardManagementViewController implements Initializable {
     @FXML
     private JFXButton delFileBtn;
 
-    private StaffMainViewController staffMainViewController;
+    private StudentMainViewController studentMainViewController;
     private ShowAwardViewController showAwardViewController;
 
     private ObservableList<ModelListShow> MLSObservableList = FXCollections.observableArrayList();
 
-    public void setParentController(StaffMainViewController controller) {
-        staffMainViewController = controller;
+    public void setParentController(StudentMainViewController controller) {
+        studentMainViewController = controller;
     }
 
     public void setParentControllerShow(ShowAwardViewController controller) {
@@ -53,7 +53,7 @@ public class AwardManagementViewController implements Initializable {
     }
 
     public void backToMainPage(MouseEvent event) {
-        StaffMainViewController controller = (StaffMainViewController) ViewManager.newWindow("staffMainView.fxml");
+        StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerAwardManagement(this);
         Stage currentStage = (Stage) backToMain.getScene().getWindow();
         currentStage.close();

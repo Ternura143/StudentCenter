@@ -1,7 +1,7 @@
 package com.studyCenter.controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.studyCenter.entity.Staff;
+import com.studyCenter.entity.Student;
 import com.studyCenter.entity.Type;
 import com.studyCenter.service.UserManager;
 import com.studyCenter.view.ViewManager;
@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 public class AdminMainViewController implements Initializable {
 
     @FXML
-    private TableView<Staff> tableView;
+    private TableView<Student> tableView;
     @FXML
     private ComboBox<Type> chooseTitle;
     @FXML
@@ -42,50 +42,50 @@ public class AdminMainViewController implements Initializable {
     @FXML
     private Label exitAccount;
     @FXML
-    private TableColumn<Staff, String> usernameCol;
+    private TableColumn<Student, String> usernameCol;
     @FXML
-    private TableColumn<Staff, String> nameCol;
+    private TableColumn<Student, String> nameCol;
     @FXML
-    private TableColumn<Staff, String> birthdayCol;
+    private TableColumn<Student, String> birthdayCol;
     @FXML
-    private TableColumn<Staff, String> titleCol;
+    private TableColumn<Student, String> titleCol;
     @FXML
-    private TableColumn<Staff, String> specialtyCol;
+    private TableColumn<Student, String> specialtyCol;
     @FXML
-    private TableColumn<Staff, String> idCol;
+    private TableColumn<Student, String> idCol;
     @FXML
-    private TableColumn<Staff, String> contactCol;
+    private TableColumn<Student, String> contactCol;
     @FXML
-    private TableColumn<Staff, String> passwordEater;
+    private TableColumn<Student, String> passwordEater;
 
-    private ObservableList<Staff> staffObservableList = FXCollections.observableArrayList();
+    private ObservableList<Student> studentObservableList = FXCollections.observableArrayList();
 
     private LoginViewController loginViewController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        staffObservableList.clear();
-        List<Staff> staffs = UserManager.getInstance().getStaffs();
-        staffObservableList.addAll(staffs);
-        tableView.setItems(staffObservableList);
-        birthdayCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("birthday"));
-        specialtyCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("specialty"));
-        titleCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("title"));
-        contactCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("contact"));
-        idCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("id"));
-        usernameCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("account"));
-        passwordEater.setCellValueFactory(new PropertyValueFactory<Staff, String>("password"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("name"));
+        studentObservableList.clear();
+        List<Student> students = UserManager.getInstance().getStudents();
+        studentObservableList.addAll(students);
+        tableView.setItems(studentObservableList);
+        birthdayCol.setCellValueFactory(new PropertyValueFactory<Student, String>("birthday"));
+        specialtyCol.setCellValueFactory(new PropertyValueFactory<Student, String>("specialty"));
+        titleCol.setCellValueFactory(new PropertyValueFactory<Student, String>("title"));
+        contactCol.setCellValueFactory(new PropertyValueFactory<Student, String>("contact"));
+        idCol.setCellValueFactory(new PropertyValueFactory<Student, String>("id"));
+        usernameCol.setCellValueFactory(new PropertyValueFactory<Student, String>("account"));
+        passwordEater.setCellValueFactory(new PropertyValueFactory<Student, String>("password"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
     }
 
     @FXML
-    void modifyStaff(MouseEvent event) {
+    void modifyStudent(MouseEvent event) {
         int selectedIndex = tableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
-            Staff selectedStaff = tableView.getSelectionModel().getSelectedItem();
-            NewStaffSettingViewController controller = (NewStaffSettingViewController) ViewManager.newWindow("staffSettingView.fxml");
-            controller.setStaff(selectedStaff);
+            Student selectedStudent = tableView.getSelectionModel().getSelectedItem();
+            NewStudentSettingViewController controller = (NewStudentSettingViewController) ViewManager.newWindow("studentSettingView.fxml");
+            controller.setStudent(selectedStudent);
             controller.setParentController(this);
         } else {
             Alert nullWarning = new Alert(Alert.AlertType.ERROR, "请选中表格中一名员工");
@@ -116,7 +116,7 @@ public class AdminMainViewController implements Initializable {
 
 //    @FXML
 //    public void createNewAccount(MouseEvent event) {
-//        NewStaffViewController controller = (NewStaffViewController) ViewManager.newWindow("newStaffView.fxml");
+//        NewStudentViewController controller = (NewStudentViewController) ViewManager.newWindow("newStudentView.fxml");
 //        controller.setParentController(this);
 //    }
 
@@ -129,15 +129,15 @@ public class AdminMainViewController implements Initializable {
     }
 
     @FXML
-    void removeStaff(MouseEvent event) {
+    void removeStudent(MouseEvent event) {
         if (tableView.getSelectionModel().getSelectedItems().size() >= 1) {
             Alert delWarning = new Alert(Alert.AlertType.CONFIRMATION, "确定删除所选员工吗？");
             delWarning.setHeaderText("点击确认删除账号");
             delWarning.setTitle("");
             Optional<ButtonType> op = delWarning.showAndWait();
             if (op.get() == ButtonType.OK) {
-                for (Staff selectedStaffSingle : tableView.getSelectionModel().getSelectedItems()) {
-                    UserManager.getInstance().removeStaff(selectedStaffSingle);
+                for (Student selectedStudentSingle : tableView.getSelectionModel().getSelectedItems()) {
+                    UserManager.getInstance().removeStudent(selectedStudentSingle);
                 }
                 initialize(null, null);
             }

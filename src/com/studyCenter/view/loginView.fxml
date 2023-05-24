@@ -16,12 +16,12 @@
          <children>
             <AnchorPane fx:id="loginLayer" layoutX="318.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="482.0" styleClass="loginLayer" stylesheets="@styleSheets.css">
                <children>
-                  <Label fx:id="staffTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="77.0" prefHeight="23.0" prefWidth="196.0" text="Student Center" textAlignment="CENTER" textFill="#3F2B63">
+                  <Label fx:id="studentTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="77.0" prefHeight="23.0" prefWidth="196.0" text="Student Center" textAlignment="CENTER" textFill="#3F2B63">
                      <font>
                         <Font name="YouYuan" size="28.0" />
                      </font>
                   </Label>
-                  <Label fx:id="staffTips" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="179.0" prefHeight="10.0" prefWidth="267.0" text="Login with social account" textAlignment="CENTER" textFill="#3F2B63">
+                  <Label fx:id="studentTips" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="179.0" prefHeight="10.0" prefWidth="267.0" text="Login with social account" textAlignment="CENTER" textFill="#3F2B63">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -49,8 +49,8 @@
                         <FontAwesomeIcon fill="WHITE" glyphName="LINKEDIN" textAlignment="CENTER" />
                      </graphic>
                   </JFXButton>
-                  <TextField fx:id="staffUsername" layoutX="119.0" layoutY="218.0" prefHeight="32.0" prefWidth="258.0" promptText="StaffName" />
-                  <JFXButton fx:id="staffLoginBtn" buttonType="RAISED" layoutX="189.0" layoutY="375.0" onAction="#staffLoginBtn" prefHeight="32.0" prefWidth="118.0" styleClass="staffLoginButton" stylesheets="@styleSheets.css" text="LOGIN">
+                  <TextField fx:id="studentUsername" layoutX="119.0" layoutY="218.0" prefHeight="32.0" prefWidth="258.0" promptText="StudentName" />
+                  <JFXButton fx:id="studentLoginBtn" buttonType="RAISED" layoutX="189.0" layoutY="375.0" onAction="#studentLoginBtn" prefHeight="32.0" prefWidth="118.0" styleClass="studentLoginButton" stylesheets="@styleSheets.css" text="LOGIN">
                      <font>
                         <Font name="Impact" size="16.0" />
                      </font></JFXButton>
@@ -70,8 +70,8 @@
                      </font>
                   </Label>
                   <PasswordField fx:id="adminPassword" layoutX="119.0" layoutY="268.0" onKeyPressed="#enterPressedAdmin" prefHeight="32.0" prefWidth="258.0" promptText="password" />
-                  <PasswordField fx:id="staffPassword" layoutX="120.0" layoutY="268.0" onKeyPressed="#enterPressedStaff" prefHeight="32.0" prefWidth="258.0" promptText="Password" />
-                  <Label fx:id="staffPWForgot" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="323.0" onMouseClicked="#forgotRemindStaff" prefHeight="10.0" prefWidth="267.0" styleClass="forgotLabelStaff" stylesheets="@styleSheets.css" text="忘记密码了？" textAlignment="CENTER" textFill="#3F2B63">
+                  <PasswordField fx:id="studentPassword" layoutX="120.0" layoutY="268.0" onKeyPressed="#enterPressedStudent" prefHeight="32.0" prefWidth="258.0" promptText="Password" />
+                  <Label fx:id="studentPWForgot" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="323.0" onMouseClicked="#forgotRemindStudent" prefHeight="10.0" prefWidth="267.0" styleClass="forgotLabelStudent" stylesheets="@styleSheets.css" text="忘记密码了？" textAlignment="CENTER" textFill="#3F2B63">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -110,7 +110,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="toStaffPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="135.0" styleClass="toStaffButton" stylesheets="@styleSheets.css" text="员工入口">
+            <JFXButton fx:id="toStudentPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="135.0" styleClass="toStudentButton" stylesheets="@styleSheets.css" text="员工入口">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

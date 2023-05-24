@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  * @Description 这是员工主页面
  * @Since version-1.0
  */
-public class StaffMainViewController {
+public class StudentMainViewController {
     @FXML
     private Button buildingManagement;
     @FXML
@@ -76,7 +76,7 @@ public class StaffMainViewController {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
         stage.close();
         LoginViewController controller = (LoginViewController) ViewManager.newWindow("loginView.fxml");
-        controller.setParentControllerStaff(this);
+        controller.setParentControllerStudent(this);
     }
 
     @FXML
