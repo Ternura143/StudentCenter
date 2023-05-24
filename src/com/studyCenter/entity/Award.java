@@ -4,12 +4,7 @@ import com.studyCenter.service.AwardManager;
 
 import java.io.Serializable;
 
-/*
- * @Author DengYimo
- * @Date  4:34
- * @Description This is description of class
- * @Since version-1.0
- */
+
 public class Award implements Serializable {
     public final static String[] TYPES = {"A", "B", "C"};
 //    private ArrayList<Problem> problems = new ArrayList<Problem>();

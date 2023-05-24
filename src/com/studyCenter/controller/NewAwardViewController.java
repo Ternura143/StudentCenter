@@ -38,36 +38,15 @@ public class   NewAwardViewController implements Initializable {
     private JFXCheckBox checkBox;
 
     private ShowAwardViewController showAwardViewController;
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description This is description of method
- * @Param [controller]
- * @Return void
- * @Since version-1.0
- */
+
     public void setParentController(ShowAwardViewController controller) {
         showAwardViewController = controller;
     }
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description This is description of method
- * @Param [location, resources]
- * @Return void
- * @Since version-1.0
- */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     void close() {
         ShowAwardViewController controller = (ShowAwardViewController) ViewManager.newWindow("ShowAwardView.fxml");
@@ -75,28 +54,14 @@ public class   NewAwardViewController implements Initializable {
         Stage currentStage = (Stage) exitLabel.getScene().getWindow();
         currentStage.close();
     }
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     void clearText(MouseEvent event) {
         idField.setText("");
         contentField.setText("");
         modeField.setText("");
     }
-/*
- * @Author DengYimo
- * @Date  5:08
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     void registHandled(MouseEvent event) {
         String id = idField.getText();
