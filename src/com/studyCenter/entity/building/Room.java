@@ -38,18 +38,18 @@ public class Room implements Serializable {
     }
 
     private int StudyType;
-    private ArrayList<Bed> beds;
+    private ArrayList<Seat> seats;
     private Level father;
 
     public Room(Level father) {
         applicationList = new ArrayList<StudyRoomApplication>();
-        beds = new ArrayList<Bed>();
+        seats = new ArrayList<Seat>();
         this.father = father;
     }
 
     public Room(String name, boolean isStudyRoom, Level father) {
         applicationList = new ArrayList<StudyRoomApplication>();
-        beds = new ArrayList<Bed>();
+        seats = new ArrayList<Seat>();
         this.name = name;
         this.isStudyRoom = isStudyRoom;
         this.father = father;
@@ -84,7 +84,7 @@ public class Room implements Serializable {
 
     public Room(String name, boolean isStudyRoom, int studyType, Level father, int maxCapacity, int resCapacity) {
         applicationList = new ArrayList<StudyRoomApplication>();
-        beds = new ArrayList<Bed>();
+        seats = new ArrayList<Seat>();
         this.name = name;
         this.isStudyRoom = isStudyRoom;
         StudyType = studyType;
@@ -109,12 +109,12 @@ public class Room implements Serializable {
         StudyType = studyType;
     }
 
-    public ArrayList<Bed> getBeds() {
-        return beds;
+    public ArrayList<Seat> getSeats() {
+        return seats;
     }
 
-    public void setBeds(ArrayList<Bed> beds) {
-        this.beds = beds;
+    public void setSeats(ArrayList<Seat> seats) {
+        this.seats = seats;
     }
 
     public String toString() {

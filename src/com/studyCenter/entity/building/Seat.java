@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @Description This is description of class
  * @Since version-1.0
  */
-public class Bed implements Serializable {
+public class Seat implements Serializable {
     private String name;
     private Course owner;
     private Room father;
@@ -30,16 +30,16 @@ public class Bed implements Serializable {
         this.owner = owner;
     }
 
-    public Bed(Room father) {
+    public Seat(Room father) {
         this.father = father;
     }
 
-    public Bed(String name, Room father) {
+    public Seat(String name, Room father) {
         this.name = name;
         this.father = father;
     }
 
-    public Bed(String name, Course owner, Room father) {
+    public Seat(String name, Course owner, Room father) {
         this.name = name;
         this.owner = owner;
         this.father = father;
@@ -58,6 +58,6 @@ public class Bed implements Serializable {
         return this.name;
     }
 
-    public Bed() {
+    public Seat() {
     }
 }
