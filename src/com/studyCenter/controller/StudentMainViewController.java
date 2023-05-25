@@ -111,19 +111,19 @@ public class StudentMainViewController {
         controller.setParentController(this);
     }
 
-    @FXML
-    public void goToBuildingManagement(MouseEvent event) {
-        Stage stage = (Stage) logoutBtn.getScene().getWindow();
-        stage.close();
-//        BuildingMainViewController controller = (BuildingMainViewController) ViewManager.newWindow("buildingMainView.fxml");
-//        controller.setParentController(this);
-    }
+//    @FXML
+//    public void goToBuildingManagement(MouseEvent event) {
+//        Stage stage = (Stage) logoutBtn.getScene().getWindow();
+//        stage.close();
+////        BuildingMainViewController controller = (BuildingMainViewController) ViewManager.newWindow("buildingMainView.fxml");
+////        controller.setParentController(this);
+//    }
 
-    @FXML
-    public void goToCheckInInfoManagement(MouseEvent event) {
-        Stage stage = (Stage) logoutBtn.getScene().getWindow();
-        stage.close();
-    }
+//    @FXML
+//    public void goToCheckInInfoManagement(MouseEvent event) {
+//        Stage stage = (Stage) logoutBtn.getScene().getWindow();
+//        stage.close();
+//    }
 
     public void setLoginViewController(LoginViewController loginViewController) {
         this.loginViewController = loginViewController;

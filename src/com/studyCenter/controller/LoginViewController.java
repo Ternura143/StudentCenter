@@ -89,14 +89,7 @@ public class LoginViewController implements Initializable {
 
 //    private AdminMainViewController adminMainViewController;
     private StudentMainViewController studentMainViewController;
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param [url, rb]
- * @Return void
- * @Since version-1.0
- */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         s1.setVisible(false);
@@ -113,14 +106,7 @@ public class LoginViewController implements Initializable {
         studentPWForgot.setVisible(true);
         studentPassword.setVisible(true);
     }
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     private void btn(MouseEvent event) {
         TranslateTransition slide = new TranslateTransition();
@@ -160,14 +146,7 @@ public class LoginViewController implements Initializable {
         slide.setOnFinished((e->{
         }));
     }
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     private void btn2(MouseEvent event) {
         TranslateTransition slide = new TranslateTransition();
@@ -207,14 +186,7 @@ public class LoginViewController implements Initializable {
         slide.setOnFinished((e->{
         }));
     }
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     private void studentLoginBtn() {
         if("student".equals(studentUsername.getText())||"user".equals(studentUsername.getText())||"西天主".equals(studentUsername.getText())||"红孩儿".equals(studentUsername.getText())||"牛魔王".equals(studentUsername.getText())||"孙悟空".equals(studentUsername.getText())&&"123456".equals(studentPassword.getText())){
@@ -257,14 +229,7 @@ public class LoginViewController implements Initializable {
 //        controller.setParentController(this);
 //    }
 
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description This is description of method
- * @Param []
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     private void adminLoginBtn() {
         if("admin".equals(adminUserName.getText())&&"123456".equals(adminPassword.getText())){
@@ -289,79 +254,37 @@ public class LoginViewController implements Initializable {
             tray.showAndDismiss(Duration.millis(3000));
         }
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     void enterPressedAdmin(KeyEvent event) throws Exception {
         if(event.getCode() == KeyCode.ENTER) {
             adminLoginBtn();
         }
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     void enterPressedStudent(KeyEvent event) throws Exception {
         if(event.getCode() == KeyCode.ENTER) {
             studentLoginBtn();
         }
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     public void exitLoginPage(MouseEvent event){
         Stage stage = (Stage)Exit.getScene().getWindow();
         stage.close();
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     public void exitBtnToRed(MouseEvent event){
         Exit.setTextFill(Paint.valueOf("Red"));
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     public void exitBtnToPurple(MouseEvent event){
         Exit.setTextFill(Paint.valueOf("#3F2B63"));
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     public void forgotRemindAdmin(MouseEvent event) {
         TrayNotification tray = new TrayNotification();
@@ -373,14 +296,7 @@ public class LoginViewController implements Initializable {
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(3000));
     }
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description This is description of method
- * @Param [event]
- * @Return void
- * @Since version-1.0
- */
+
     @FXML
     public void forgotRemindStudent(MouseEvent event) {
         TrayNotification tray = new TrayNotification();
