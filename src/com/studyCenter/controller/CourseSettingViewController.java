@@ -67,7 +67,7 @@ public class CourseSettingViewController implements Initializable {
             Stage currentStage = (Stage) exitLabel.getScene().getWindow();
             currentStage.close();
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "请勾选同意协议");
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Please check the agreement");
             alert.setHeaderText("");
             alert.show();
         }

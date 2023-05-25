@@ -45,17 +45,17 @@
                   <Image url="@images/studentCurrent.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="newFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="266.0" onMouseClicked="#createNewAccount" prefHeight="30.0" prefWidth="151.0" styleClass="creButton" stylesheets="@courseManagementView.css" text="新建档案" textFill="WHITE">
+            <JFXButton fx:id="newFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="266.0" onMouseClicked="#createNewAccount" prefHeight="30.0" prefWidth="151.0" styleClass="creButton" stylesheets="@courseManagementView.css" text="Add Course" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="modFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="367.0" onMouseClicked="#modifyCourse" prefHeight="30.0" prefWidth="151.0" styleClass="modButton" stylesheets="@courseManagementView.css" text="修改档案" textFill="WHITE">
+            <JFXButton fx:id="modFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="367.0" onMouseClicked="#modifyCourse" prefHeight="30.0" prefWidth="151.0" styleClass="modButton" stylesheets="@courseManagementView.css" text="Modify Course" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="delFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="317.0" onMouseClicked="#removeCourse" prefHeight="30.0" prefWidth="151.0" styleClass="delButton" stylesheets="@courseManagementView.css" text="删除档案" textFill="WHITE">
+            <JFXButton fx:id="delFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="317.0" onMouseClicked="#removeCourse" prefHeight="30.0" prefWidth="151.0" styleClass="delButton" stylesheets="@courseManagementView.css" text="Delete Course" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

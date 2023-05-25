@@ -28,12 +28,12 @@
             <Separator layoutX="-8.0" layoutY="-17.0" opacity="0.27" prefHeight="35.0" prefWidth="573.0" />
             <VBox layoutX="296.0" layoutY="63.0" prefHeight="367.0" prefWidth="220.0" spacing="10.0" stylesheets="@styleSheets.css">
                <children>
-                  <TextField fx:id="courseNameField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />
-                  <TextField fx:id="courseIDField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />
-                  <TextField fx:id="categoryField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />
-                  <TextField fx:id="scoreField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />
-<!--                  <TextField fx:id="ECPField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />-->
-<!--                  <TextField fx:id="ECNField" prefHeight="35.0" prefWidth="200.0" promptText="点击输入" styleClass="textField" stylesheets="@settingStudent.css" />-->
+                  <TextField fx:id="courseNameField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
+                  <TextField fx:id="courseIDField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
+                  <TextField fx:id="categoryField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
+                  <TextField fx:id="scoreField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
+<!--                  <TextField fx:id="ECPField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
+<!--                  <TextField fx:id="ECNField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
                </children>
                <opaqueInsets>
                   <Insets bottom="10.0" top="10.0" />
@@ -46,34 +46,24 @@
                <children>
                   <Label prefHeight="35.0" prefWidth="200.0" text="• Course Name：" textFill="#ddd9d9">
                      <font>
-                        <Font name="YouYuan" size="18.0" />
+                        <Font name="YouYuan" size="14.0" />
                      </font>
                   </Label>
                   <Label prefHeight="35.0" prefWidth="200.0" text="• Course No.：" textFill="#ddd9d9">
                      <font>
-                        <Font name="YouYuan" size="18.0" />
+                        <Font name="YouYuan" size="14.0" />
                      </font>
                   </Label>
                   <Label prefHeight="35.0" prefWidth="200.0" text="• Course Category：" textFill="#ddd9d9">
                      <font>
-                        <Font name="YouYuan" size="18.0" />
+                        <Font name="YouYuan" size="14.0" />
                      </font>
                   </Label>
                   <Label prefHeight="35.0" prefWidth="200.0" text="• Course Grade：" textFill="#ddd9d9">
                      <font>
-                        <Font name="YouYuan" size="18.0" />
+                        <Font name="YouYuan" size="14.0" />
                      </font>
                   </Label>
-<!--                  <Label prefHeight="35.0" prefWidth="200.0" text="• 紧急联系人:" textFill="#ddd9d9">-->
-<!--                     <font>-->
-<!--                        <Font name="YouYuan" size="18.0" />-->
-<!--                     </font>-->
-<!--                  </Label>-->
-<!--                  <Label prefHeight="35.0" prefWidth="200.0" text="• 紧急联系电话:" textFill="#ddd9d9">-->
-<!--                     <font>-->
-<!--                        <Font name="YouYuan" size="18.0" />-->
-<!--                     </font>-->
-<!--                  </Label>-->
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -96,16 +86,11 @@
             <HBox layoutX="141.0" layoutY="483.0" prefHeight="21.0" prefWidth="324.0">
                <children>
                   <JFXCheckBox fx:id="checkBox" prefHeight="31.0" prefWidth="29.0" text=" " unCheckedColor="#bfbfbf" />
-                  <Label prefHeight="39.0" prefWidth="84.0" text="我已阅读并同意" textFill="#b2b1b1" underline="true">
+                  <Label prefHeight="39.0" prefWidth="350.0" text="I've confirmed the information is correct" textFill="#b2b1b1" underline="true">
                      <font>
                         <Font name="YouYuan" size="12.0" />
                      </font>
                   </Label>
-                  <Hyperlink prefHeight="21.0" prefWidth="151.0" text="东软集团相关规定" textFill="#d7bf0e" textOverrun="WORD_ELLIPSIS" underline="true">
-                     <font>
-                        <Font name="Tiger" size="12.0" />
-                     </font>
-                  </Hyperlink>
                </children>
             </HBox>
          </children>

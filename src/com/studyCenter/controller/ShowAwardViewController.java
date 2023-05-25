@@ -18,12 +18,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  5:03
- * @Description 这是展示模板的控制器类
- * @Since version-1.0
- */
+
 public class ShowAwardViewController implements Initializable {
     @FXML
     private TableView<AwardShow> tableView;

@@ -17,12 +17,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  5:04
- * @Description 这是模板管理主页面
- * @Since version-1.0
- */
+
 public class AwardManagementViewController implements Initializable {
     @FXML
     private JFXButton backToMain;
@@ -74,8 +69,8 @@ public class AwardManagementViewController implements Initializable {
     @FXML
     public void delAward(MouseEvent event) {
         if (tableView.getSelectionModel().getSelectedItems().size() >= 1) {
-            Alert delWarning = new Alert(Alert.AlertType.CONFIRMATION, "确定删除所选奖项吗？");
-            delWarning.setHeaderText("点击确认删除奖项");
+            Alert delWarning = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to delete the selected award?");
+            delWarning.setHeaderText("Confirm to delete award");
             delWarning.setTitle("");
             Optional<ButtonType> op = delWarning.showAndWait();
             if (op.get() == ButtonType.OK) {
@@ -85,8 +80,8 @@ public class AwardManagementViewController implements Initializable {
                 initialize(null, null);
             }
         } else {
-            Alert nullWarning = new Alert(Alert.AlertType.ERROR, "请选中表格中至少一个奖项");
-            nullWarning.setHeaderText("未选中任何一个奖项！");
+            Alert nullWarning = new Alert(Alert.AlertType.ERROR, "Please select at least one award in the form!");
+            nullWarning.setHeaderText("None of the awards selected！");
             nullWarning.show();
         }
     }

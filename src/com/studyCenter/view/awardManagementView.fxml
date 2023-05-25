@@ -45,12 +45,12 @@
                   <Image url="@images/studentCurrent.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="delFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="317.0" onMouseClicked="#delAward" prefHeight="30.0" prefWidth="151.0" styleClass="delButton" stylesheets="@courseManagementView.css" text="删除模板" textFill="WHITE">
+            <JFXButton fx:id="delFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="317.0" onMouseClicked="#delAward" prefHeight="30.0" prefWidth="151.0" styleClass="delButton" stylesheets="@courseManagementView.css" text="Delete Award" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="showBtn" buttonType="RAISED" layoutX="62.0" layoutY="421.0" onMouseClicked="#showAward" prefHeight="40.0" prefWidth="151.0" styleClass="modButton" stylesheets="@courseManagementView.css" text="预览模板" textFill="WHITE">
+            <JFXButton fx:id="showBtn" buttonType="RAISED" layoutX="62.0" layoutY="421.0" onMouseClicked="#showAward" prefHeight="40.0" prefWidth="151.0" styleClass="modButton" stylesheets="@courseManagementView.css" text="Preview Award" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -79,9 +79,9 @@
             </Label>
             <TableView fx:id="tableView" layoutX="165.0" layoutY="167.0" opacity="0.73" prefHeight="487.0" prefWidth="836.0" style="-fx-background-color: #2F2B43;" stylesheets="@mainView.css">
                <columns>
-                  <TableColumn fx:id="idCol" prefWidth="75.0" text="模板ID" />
-                  <TableColumn fx:id="contentCol" prefWidth="75.0" text="题目内容" />
-                  <TableColumn fx:id="modeCol" prefWidth="75.0" text="模板类型" />
+                  <TableColumn fx:id="idCol" prefWidth="75.0" text="Award ID" />
+                  <TableColumn fx:id="contentCol" prefWidth="75.0" text="Award Type" />
+                  <TableColumn fx:id="modeCol" prefWidth="75.0" text="Positions held" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

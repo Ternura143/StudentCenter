@@ -69,22 +69,22 @@ public class   NewAwardViewController implements Initializable {
         String mode = modeField.getText();
 
         if (id.equals("") && content.equals("") && mode.equals("")) {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "核对一下再试试吧");
-            alert.setHeaderText("信息输入不能有空值");
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Check and try again");
+            alert.setHeaderText("No null values for message input");
             alert.show();
         }
 
         if (checkBox.isSelected()) {
             AwardShow awardShow = new AwardShow(id, content, mode);
             if (AwardShowManager.getInstance().addAwardShow(awardShow)) {
-                Alert regSuccess = new Alert(Alert.AlertType.INFORMATION, "新的问题已添加");
-                regSuccess.setHeaderText("添加成功");
+                Alert regSuccess = new Alert(Alert.AlertType.INFORMATION, "New events have been added");
+                regSuccess.setHeaderText("Added successfully");
                 regSuccess.showAndWait();
                 showAwardViewController.initialize(null, null);
                 close();
             }
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "请勾选同意协议");
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Please check the agreement");
             alert.setHeaderText("");
             alert.show();
         }
