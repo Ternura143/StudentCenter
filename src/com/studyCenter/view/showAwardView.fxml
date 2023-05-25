@@ -27,7 +27,7 @@
                   <Font name="Agency FB Bold" size="34.0" />
                </font>
             </Label>
-            <TableView fx:id="tableView" layoutX="-8.0" layoutY="-30.0" opacity="0.73" prefHeight="491.0" prefWidth="573.0" style="-fx-background-color: #2F2B43;" stylesheets="@teacherMainView.css">
+            <TableView fx:id="tableView" layoutX="-8.0" layoutY="-30.0" opacity="0.73" prefHeight="491.0" prefWidth="573.0" style="-fx-background-color: #2F2B43;" stylesheets="@mainView.css">
                <columns>
                   <TableColumn fx:id="idCol" prefWidth="75.0" text="题目ID" />
                   <TableColumn fx:id="contentCol" prefWidth="75.0" text="题目内容" />

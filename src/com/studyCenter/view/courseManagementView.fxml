@@ -98,7 +98,7 @@
 <!--                  <Font name="System Italic" size="13.0" />-->
 <!--               </font>-->
 <!--            </Label>-->
-            <TableView fx:id="tableView" layoutX="80.0" layoutY="143.0" opacity="0.73" prefHeight="580.0" prefWidth="979.0" style="-fx-background-color: #2F2B43;" stylesheets="@teacherMainView.css">
+            <TableView fx:id="tableView" layoutX="80.0" layoutY="143.0" opacity="0.73" prefHeight="580.0" prefWidth="979.0" style="-fx-background-color: #2F2B43;" stylesheets="@mainView.css">
                <columns>
                   <TableColumn fx:id="courseNameCol" prefWidth="75.0" text="课程名称" />
                   <TableColumn fx:id="courseIDCol" prefWidth="75.0" text="课程编号" />
