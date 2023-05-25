@@ -31,7 +31,7 @@ public class StudentMainViewController {
 
     private LoginViewController loginViewController;
     private CourseManagementViewController courseManagementViewController;
-    private ConstructionViewController constructionViewController;
+    private ProjectViewController projectViewController;
     private AwardManagementViewController awardManagementViewController;
     private StudyRoomManagementViewController studyRoomManagementViewController;
 //    private BuildingMainViewController buildingMainViewController;
@@ -49,8 +49,8 @@ public class StudentMainViewController {
         awardManagementViewController = controller;
     }
 
-    public void setParentControllerConstruction(ConstructionViewController controller) {
-        constructionViewController = controller;
+    public void setParentControllerProject(ProjectViewController controller) {
+        projectViewController = controller;
     }
 
     public void setParentControllerStudyRoom(StudyRoomManagementViewController controller) {
@@ -91,7 +91,7 @@ public class StudentMainViewController {
     public void goToOtherManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
         stage.close();
-        ConstructionViewController controller = (ConstructionViewController) ViewManager.newWindow("constructionView.fxml");
+        ProjectViewController controller = (ProjectViewController) ViewManager.newWindow("projectView.fxml");
         controller.setParentController(this);
     }
 

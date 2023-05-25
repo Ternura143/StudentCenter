@@ -20,14 +20,7 @@ public class Database implements Serializable {
 
     private Database() {
     }
-/*
- * @Author DengYimo
- * @Date  4:47
- * @Description This is description of method
- * @Param []
- * @Return java.util.ArrayList<com.neusoft.entity.building.Building>
- * @Since version-1.0
- */
+
     public ArrayList<Building> getBuildings() {
         return buildings;
     }

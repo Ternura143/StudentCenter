@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  * @Description 这事拓展页面的控制器类
  * @Since version-1.0
  */
-public class ConstructionViewController {
+public class ProjectViewController {
     @FXML
     private JFXButton backToMain;
 
@@ -23,7 +23,7 @@ public class ConstructionViewController {
 
     public void backToMainPage(MouseEvent event){
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
-        controller.setParentControllerConstruction(this);
+        controller.setParentControllerProject(this);
         Stage currentStage = (Stage) backToMain.getScene().getWindow();
         currentStage.close();
     }
