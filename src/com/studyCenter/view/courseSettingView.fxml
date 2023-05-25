@@ -21,7 +21,7 @@
          <children>
             <ImageView fitHeight="573.0" fitWidth="576.0" layoutX="-10.0" layoutY="-109.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@gif/R-C%20(2).gif" />
+                  <Image url="@gif/triangle.gif" />
                </image>
             </ImageView>
             <Separator layoutX="-11.0" layoutY="442.0" opacity="0.27" prefHeight="42.0" prefWidth="573.0" />

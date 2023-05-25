@@ -34,7 +34,7 @@
                </image>
             </ImageView>
             <Button layoutX="23.0" layoutY="107.0" mnemonicParsing="false" opacity="0.7" prefHeight="106.0" prefWidth="230.0" style="-fx-background-color: #2F2B43; -fx-background-radius: 20;" />
-            <JFXButton fx:id="backToMain" layoutX="143.0" layoutY="141.0" onMouseClicked="#backToMainPage" prefHeight="40.0" prefWidth="76.0" styleClass="button2" stylesheets="@courseManagementView.css" text="返回主页" textFill="WHITE">
+            <JFXButton fx:id="backToMain" layoutX="143.0" layoutY="141.0" onMouseClicked="#backToMainPage" prefHeight="40.0" prefWidth="76.0" styleClass="button2" stylesheets="@courseManagementView.css" text="Back" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -42,7 +42,7 @@
             <Pane layoutX="81.0" layoutY="346.0" />
             <ImageView fitHeight="70.0" fitWidth="63.0" layoutX="57.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/ic_usr.png" />
+                  <Image url="@images/studentCurrent.png" />
                </image>
             </ImageView>
             <JFXButton fx:id="newFileBtn" buttonType="RAISED" layoutX="62.0" layoutY="266.0" onMouseClicked="#createNewAccount" prefHeight="30.0" prefWidth="151.0" styleClass="creButton" stylesheets="@courseManagementView.css" text="新建档案" textFill="WHITE">
@@ -71,11 +71,11 @@
       </AnchorPane>
       <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="580.0" fitWidth="979.0" layoutX="81.0" layoutY="144.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@gif/0761.gif_wh860.gif" />
-               </image>
-            </ImageView>
+<!--            <ImageView fitHeight="580.0" fitWidth="979.0" layoutX="81.0" layoutY="144.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@gif/0761.gif_wh860.gif" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
             <Pane layoutX="52.0" layoutY="-177.0" prefHeight="340.0" prefWidth="517.0" rotate="41.6" style="-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 70;" />
             <Pane layoutX="329.0" layoutY="223.0" />
             <Pane layoutX="813.0" prefHeight="70.0" prefWidth="349.0" style="-fx-background-radius: 0 0 0 40; -fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);">

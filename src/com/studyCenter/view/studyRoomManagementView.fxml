@@ -36,7 +36,7 @@
                </image>
             </ImageView>
             <Button layoutX="23.0" layoutY="107.0" mnemonicParsing="false" opacity="0.7" prefHeight="106.0" prefWidth="230.0" style="-fx-background-color: #2F2B43; -fx-background-radius: 20;" />
-            <JFXButton fx:id="backToMain" layoutX="143.0" layoutY="141.0" onMouseClicked="#backToMainPage" prefHeight="40.0" prefWidth="76.0" styleClass="button2" stylesheets="@courseManagementView.css" text="返回主页" textFill="WHITE">
+            <JFXButton fx:id="backToMain" layoutX="143.0" layoutY="141.0" onMouseClicked="#backToMainPage" prefHeight="40.0" prefWidth="76.0" styleClass="button2" stylesheets="@courseManagementView.css" text="Back" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -44,7 +44,7 @@
             <Pane layoutX="81.0" layoutY="346.0" />
             <ImageView fitHeight="70.0" fitWidth="63.0" layoutX="57.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/ic_usr.png" />
+                  <Image url="@images/studentCurrent.png" />
                </image>
             </ImageView>
             <Line endX="131.60003662109375" layoutX="143.0" layoutY="752.0" startX="-138.00001525878906" stroke="#b28cd1" />

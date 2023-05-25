@@ -104,7 +104,7 @@
             <Button fx:id="courseManagement1" layoutX="24.0" layoutY="131.0" mnemonicParsing="false" opacity="0.7" prefHeight="106.0" prefWidth="230.0" style="-fx-background-color: #2F2B43; -fx-background-radius: 20;" />
             <ImageView fitHeight="70.0" fitWidth="69.0" layoutX="45.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/ic_usr.png" />
+                  <Image url="@images/studentCurrent.png" />
                </image>
             </ImageView>
             <JFXButton fx:id="logoutBtn" layoutX="150.0" layoutY="150.0" onMouseClicked="#logoutButton" prefHeight="2.0" prefWidth="76.0" styleClass="button4" stylesheets="@studentMainView.css" text="Log Out" textFill="WHITE">
