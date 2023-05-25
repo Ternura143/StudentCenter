@@ -8,7 +8,7 @@ import java.util.List;
 
 public class UserManager {
     private List<Student> students;
-//    private  List<Admin> admins;
+//    private  List<Teacher> teachers;
     private AbstractUser currentUser;
     private static UserManager singletonInstance;
 
@@ -22,7 +22,7 @@ public class UserManager {
 
     private UserManager() {
         students =  FileOperator.loadData("Students.json", Student.class);
-//        admins = FileOperator.loadData("Admins.json", Admin.class);
+//        teachers = FileOperator.loadData("Teachers.json", Teacher.class);
     }
 
     /**
@@ -33,10 +33,10 @@ public class UserManager {
      * @return  boolean 表示密码验证成功与否
      */
     public boolean CheckLogin(String account, String password, int role){
-//        if (role == 1) {    // Admin
-//            for (Admin localAdmin : admins) {
-//                if(localAdmin.getAccount().equals(account) && localAdmin.getPassword().equals(password)) {
-//                    currentUser = localAdmin;
+//        if (role == 1) {    // Teacher
+//            for (Teacher localTeacher : teachers) {
+//                if(localTeacher.getAccount().equals(account) && localTeacher.getPassword().equals(password)) {
+//                    currentUser = localTeacher;
 //                    return true;
 //                }
 //            }
@@ -52,13 +52,13 @@ public class UserManager {
         return false;
     }
 
-//    public boolean addAdmin(Admin admin) {
-//        for (Admin localAdmin : admins) {
-//            if (admin.getAccount().equals(localAdmin.getAccount()))
+//    public boolean addTeacher(Teacher teacher) {
+//        for (Teacher localTeacher : teachers) {
+//            if (teacher.getAccount().equals(localTeacher.getAccount()))
 //                return false;
 //        }
-//        admins.add(admin);
-//        FileOperator.writeData(admin, "Admins.json");
+//        teachers.add(teacher);
+//        FileOperator.writeData(teacher, "Teachers.json");
 //        return true;
 //    }
 
@@ -72,14 +72,14 @@ public class UserManager {
         return true;
     }
 
-//    public boolean removeAdmin(AbstractUser user) {
-//        if (user.getClass() == Admin.class) {
-//            admins.remove(user);
-//            FileOperator.writeData(admins, "Admins.json");
+//    public boolean removeTeacher(AbstractUser user) {
+//        if (user.getClass() == Teacher.class) {
+//            teachers.remove(user);
+//            FileOperator.writeData(teachers, "Teachers.json");
 //            return true;
 //        } else if (user.getClass() == Student.class) {
 //            students.remove(user);
-//            FileOperator.writeData(students, "Admins.json");
+//            FileOperator.writeData(students, "Teachers.json");
 //            return true;
 //        }
 //        return false;
@@ -102,7 +102,7 @@ public class UserManager {
 //        return currentUser;
 //    }
 //
-//    public List<Admin> getAdmins() {
-//        return admins;
+//    public List<Teacher> getTeachers() {
+//        return teachers;
 //    }
 }
