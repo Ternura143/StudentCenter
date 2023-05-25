@@ -88,7 +88,7 @@
                   </ImageView>
                   <ImageView fx:id="searchCancelBtn" fitHeight="30.0" fitWidth="28.0" layoutX="293.0" layoutY="18.0" onMouseClicked="#cancelSearch" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/Cancel-256%20(1).png" />
+                        <Image url="@icons/Cancel-256.png" />
                      </image>
                   </ImageView>
                </children>
