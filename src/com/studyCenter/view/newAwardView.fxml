@@ -16,7 +16,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="406.0" styleClass="background" stylesheets="@newStudent.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studyCenter.controller.NewAwardViewController">
    <children>
       <Separator layoutX="46.0" layoutY="117.0" opacity="0.15" prefHeight="35.0" prefWidth="314.0" />
-      <Label alignment="CENTER" layoutX="115.0" layoutY="46.0" prefHeight="154.0" prefWidth="167.0" text="Adding an event" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="15.0" layoutY="46.0" prefHeight="154.0" prefWidth="367.0" text="Add an event" textFill="WHITE">
          <font>
             <Font name="YouYuan" size="26.0" />
          </font>

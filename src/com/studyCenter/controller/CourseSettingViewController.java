@@ -12,12 +12,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  5:02
- * @Description 这是病人信息设置页面的控制器类
- * @Since version-1.0
- */
+
 public class CourseSettingViewController implements Initializable {
     @FXML
     private TextField courseNameField;
@@ -52,8 +47,8 @@ public class CourseSettingViewController implements Initializable {
 
         if (checkBox.isSelected()) {
             if (courseName.equals("") || category.equals("") || courseID.equals("") || score.equals("") ) {
-                Alert alert = new Alert(Alert.AlertType.WARNING, "核对一下再试试吧");
-                alert.setHeaderText("信息输入不能有空值");
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Check it and try again");
+                alert.setHeaderText("No null values for message input");
                 alert.show();
                 return;
             }
@@ -61,7 +56,7 @@ public class CourseSettingViewController implements Initializable {
                 CourseManager.getInstance().removeCourse(inCourse);
             }
             CourseManager.getInstance().addCourse(new Course(courseName, courseID, category, id, score));
-            Alert info = new Alert(Alert.AlertType.INFORMATION, "课程" + courseName + "信息已修改");
+            Alert info = new Alert(Alert.AlertType.INFORMATION, "Course" + courseName + "'s information has been amended");
             info.showAndWait();
             courseManagementViewController.initialize(null, null);
             Stage currentStage = (Stage) exitLabel.getScene().getWindow();

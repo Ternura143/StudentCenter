@@ -11,12 +11,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  4:59
- * @Description 这是新建病患的控制器类
- * @Since version-1.0
- */
+
 public class NewCourseViewController implements Initializable {
     @FXML
     private TextField courseNameField;
@@ -49,8 +44,8 @@ public class NewCourseViewController implements Initializable {
 
         if (checkBox.isSelected()) {
             if (courseName.equals("") || category.equals("") || courseID.equals("") || score.equals("") ) {
-                Alert alert = new Alert(Alert.AlertType.WARNING, "核对一下再试试吧");
-                alert.setHeaderText("病患信息输入不完整");
+                Alert alert = new Alert(Alert.AlertType.WARNING, "check it and try again");
+                alert.setHeaderText("Incomplete information input");
                 alert.show();
                 return;
             }
@@ -58,7 +53,7 @@ public class NewCourseViewController implements Initializable {
                 CourseManager.getInstance().removeCourse(inCourse);
             }
             CourseManager.getInstance().addCourse(new Course(courseName, courseID, category, id, score));
-            Alert info = new Alert(Alert.AlertType.INFORMATION,"病患已添加");
+            Alert info = new Alert(Alert.AlertType.INFORMATION,"Course has been added");
             info.showAndWait();
             courseManagementViewController.initialize(null, null);
             Stage currentStage = (Stage) exitLabel.getScene().getWindow();
