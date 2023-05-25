@@ -38,7 +38,7 @@ public class testRun extends Application {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        primaryStage.getIcons().add(new Image("com/studyCenter/view/icons/Home-256.png"));
+        primaryStage.getIcons().add(new Image("com/studyCenter/view/icons/Home.png"));
         root.setOnMousePressed(event -> {
             xOffSet = event.getSceneX();
             yOffSet = event.getSceneY();

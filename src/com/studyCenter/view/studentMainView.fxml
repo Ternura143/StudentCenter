@@ -27,7 +27,7 @@
                      <graphic>
                         <ImageView fitHeight="48.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/Business-Man-Settings-256.png" />
+                              <Image url="@icons/Business.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -44,7 +44,7 @@
                      <graphic>
                         <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/Inventory-256.png" />
+                              <Image url="@icons/Inventory.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -59,7 +59,7 @@
                      <graphic>
                         <ImageView fitHeight="52.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/Home-256.png" />
+                              <Image url="@icons/Home.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -144,7 +144,7 @@
                   </Circle>
                   <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="79.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/Business-Man-Settings-256.png" />
+                        <Image url="@icons/Business.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="68.0" layoutY="190.0" prefHeight="5.0" prefWidth="76.0" text="Course" textFill="WHITE">
@@ -177,7 +177,7 @@
                   </Circle>
                   <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="76.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/Inventory-256.png" />
+                        <Image url="@icons/Inventory.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="71.0" layoutY="191.0" prefHeight="23.0" prefWidth="76.0" text="Award" textFill="WHITE">
@@ -210,7 +210,7 @@
                   </Circle>
                   <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="79.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/Home-256.png" />
+                        <Image url="@icons/Home.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="50.0" layoutY="193.0" prefHeight="18.0" prefWidth="118.0" text="Study Room" textFill="WHITE">

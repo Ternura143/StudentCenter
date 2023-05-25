@@ -44,32 +44,27 @@
             <Line endX="131.60003662109375" layoutX="143.0" layoutY="752.0" startX="-138.00001525878906" stroke="#b28cd1" />
             <ImageView fitHeight="143.0" fitWidth="144.0" layoutX="63.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons/Tools-256.png" />
+                  <Image url="@icons/Tools.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="186.0" layoutX="45.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@gif/5-121204193949-51.gif" />
-               </image>
-            </ImageView>
+
+            <Label alignment="CENTER" layoutX="45.0" layoutY="472.0" prefHeight="40.0" prefWidth="200.0" text="Continuously Increasing" textFill="#e2e8e7">
+               <font>
+                  <Font name="YouYuan" size="16.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
          <children>
             <Pane layoutX="52.0" layoutY="-177.0" opacity="0.63" prefHeight="340.0" prefWidth="517.0" rotate="41.6" style="-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 70;" />
-            <Pane layoutX="329.0" layoutY="223.0" />
-            <Label layoutX="440.0" layoutY="788.0" text="copyright@Deng-Yimo" textFill="#919191">
-               <font>
-                  <Font name="System Italic" size="13.0" />
-               </font>
-            </Label>
-            <ImageView  fitHeight="311.0" fitWidth="350.0" layoutX="461.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="81.0" layoutY="207.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/collab.png" />
                </image>
             </ImageView>
-
-            <Label alignment="CENTER" layoutX="362.0" layoutY="586.0" prefHeight="106.0" prefWidth="527.0" text="此页面正在施工..." textFill="#7668b4">
+            <Pane layoutX="329.0" layoutY="223.0" />
+            <Label alignment="CENTER" layoutX="332.0" layoutY="36.0" prefHeight="106.0" prefWidth="527.0" text="Project Show" textFill="#e2e8e7">
                <font>
                   <Font name="YouYuan" size="58.0" />
                </font>
