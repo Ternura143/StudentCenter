@@ -107,7 +107,7 @@
                         <Font name="YouYuan" size="12.0" />
                      </font>
                   </Label>
-                  <Hyperlink prefHeight="21.0" prefWidth="151.0" text="东软颐养中心云平台条例" textFill="#d7bf0e" textOverrun="WORD_ELLIPSIS" underline="true">
+                  <Hyperlink prefHeight="21.0" prefWidth="151.0" text="Student Center云平台条例" textFill="#d7bf0e" textOverrun="WORD_ELLIPSIS" underline="true">
                      <font>
                         <Font name="Tiger" size="12.0" />
                      </font>

@@ -22,9 +22,9 @@
       <AnchorPane prefHeight="820.0" prefWidth="277.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutX="23.0" layoutY="236.0" mnemonicParsing="false" opacity="0.7" prefHeight="203.0" prefWidth="230.0" style="-fx-background-color: #2F2B43; -fx-background-radius: 20;" />
-            <Label layoutX="88.0" layoutY="30.0" prefHeight="53.0" prefWidth="186.0" text="东软颐养中心" textFill="WHITE">
+            <Label layoutX="85.0" layoutY="30.0" prefHeight="53.0" prefWidth="186.0" text="Student Center" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="21.0" />
                </font>
                <effect>
                   <Bloom />

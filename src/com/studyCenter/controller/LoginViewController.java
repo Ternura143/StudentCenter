@@ -23,12 +23,7 @@ import tray.notification.TrayNotification;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/*
- * @Author DengYimo
- * @Date  4:58
- * @Description 这是登录主页面的控制器类
- * @Since version-1.0
- */
+
 public class LoginViewController implements Initializable {
     @FXML
     private StackPane basicLayer;
@@ -291,8 +286,8 @@ public class LoginViewController implements Initializable {
         AnimationType type = AnimationType.FADE;
 
         tray.setAnimationType(type);
-        tray.setTitle("默认Teacher");
-        tray.setMessage("账号：teacher\n密码: 123456");
+        tray.setTitle("Default Teacher");
+        tray.setMessage("Account：teacher\nPassword: 123456");
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(3000));
     }
@@ -303,8 +298,8 @@ public class LoginViewController implements Initializable {
         AnimationType type = AnimationType.FADE;
 
         tray.setAnimationType(type);
-        tray.setTitle("默认Student");
-        tray.setMessage("账号: student\n密码: 123456");
+        tray.setTitle("Default Student");
+        tray.setMessage("Account: student\nPassword: 123456");
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(100));
     }
