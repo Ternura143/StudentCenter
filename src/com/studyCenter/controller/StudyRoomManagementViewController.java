@@ -94,17 +94,17 @@ public class StudyRoomManagementViewController implements Initializable {
     @FXML
     private void studyRoomApplicationButtonFired() {
         if(studyTableView.getSelectionModel().getSelectedItem() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "请选择申请的房间。");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please select the room");
             alert.show();
             return ;
         }
         if(studyAplicationCourseChoice.getSelectionModel().getSelectedItem() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "请选择申请人 。");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please select a course");
             alert.show();
             return ;
         }
         if(studyApplicationTimeField.getText().equals("")) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "请输入申请时间（小时）。");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please enter the application time(hour)");
             alert.show();
             return ;
         }
@@ -120,14 +120,14 @@ public class StudyRoomManagementViewController implements Initializable {
             for(StudyRoomApplication application : room.getApplicationList())
                 mintime = Math.min(mintime, application.getStartTime().getTime() + application.getDurationTime());
             String s = "";
-            if(mintime - nowtime < 60 * 1000) s = String.valueOf((mintime - nowtime) / 1000) + "秒";
-            else if(mintime - nowtime < 60 * 60 * 1000) s = String.valueOf((mintime - nowtime) / 60 / 1000) + "分"
-                    +  String.valueOf((mintime - nowtime) / 1000 % 60) + "秒";
+            if(mintime - nowtime < 60 * 1000) s = String.valueOf((mintime - nowtime) / 1000) + "s";
+            else if(mintime - nowtime < 60 * 60 * 1000) s = String.valueOf((mintime - nowtime) / 60 / 1000) + "min"
+                    +  String.valueOf((mintime - nowtime) / 1000 % 60) + "s";
 
-            else if(mintime - nowtime < 60 * 60 * 60 * 1000) s = String.valueOf((mintime - nowtime) / 60 / 60 / 1000) + "小时"
-                    + String.valueOf((mintime - nowtime) % (60 * 60 * 1000) / 60 / 1000) + "分"
-                    +  String.valueOf((mintime - nowtime) % (60 * 1000) / 1000 % 60) + "秒";
-            Alert alert = new Alert(Alert.AlertType.ERROR, "当前房间申请数已满，还需" + s);
+            else if(mintime - nowtime < 60 * 60 * 60 * 1000) s = String.valueOf((mintime - nowtime) / 60 / 60 / 1000) + "hour"
+                    + String.valueOf((mintime - nowtime) % (60 * 60 * 1000) / 60 / 1000) + "min"
+                    +  String.valueOf((mintime - nowtime) % (60 * 1000) / 1000 % 60) + "s";
+            Alert alert = new Alert(Alert.AlertType.ERROR, "The current number of applications is full, still need" + s);
             alert.show();
             return ;
         }
@@ -136,7 +136,7 @@ public class StudyRoomManagementViewController implements Initializable {
         initialize(null,null);
         Database.saveToFile();
     }
-    //稀有设备管理界面初始化
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //初始化表格
@@ -156,10 +156,10 @@ public class StudyRoomManagementViewController implements Initializable {
         }
         studyTableView.setItems(studyRoomList);
         studyTableView.getColumns().clear();
-        TableColumn<Room, String> roomTypeColumn = new TableColumn<Room, String>("房间种类");
-        TableColumn<Room, String> roomPositionColumn = new TableColumn<Room, String>("位置");
-        TableColumn<Room, String> maxCapacityColumn = new TableColumn<Room, String>("最大容纳人数");
-        TableColumn<Room, String> resCapacityColumn = new TableColumn<Room, String>("剩余容纳人数");
+        TableColumn<Room, String> roomTypeColumn = new TableColumn<Room, String>("Room Type");
+        TableColumn<Room, String> roomPositionColumn = new TableColumn<Room, String>("Location");
+        TableColumn<Room, String> maxCapacityColumn = new TableColumn<Room, String>("Maximum Capacity");
+        TableColumn<Room, String> resCapacityColumn = new TableColumn<Room, String>("Residual Capacity");
         roomTypeColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Room,String>, ObservableValue<String>>() {
 
             @Override

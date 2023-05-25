@@ -246,63 +246,6 @@
                   </Label>
                </children>
             </Pane>
-<!--            <Pane layoutX="730.0" layoutY="428.0" prefHeight="256.0" prefWidth="217.0">-->
-<!--               <children>-->
-<!--                  <Button mnemonicParsing="false" onMouseClicked="#goToOtherManagement" opacity="0.7" prefHeight="256.0" prefWidth="217.0" styleClass="button2" stylesheets="@studentMainView.css" />-->
-<!--                  <Circle layoutX="106.0" layoutY="109.0" radius="72.0" strokeType="INSIDE">-->
-<!--                     <fill>-->
-<!--                        <LinearGradient endX="1.0" endY="1.0" startY="0.4952380952380952">-->
-<!--                           <stops>-->
-<!--                              <Stop color="#34e063" />-->
-<!--                              <Stop color="WHITE" offset="0.9961685823754789" />-->
-<!--                              <Stop color="WHITE" offset="1.0" />-->
-<!--                           </stops>-->
-<!--                        </LinearGradient>-->
-<!--                     </fill>-->
-<!--                  </Circle>-->
-<!--                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="76.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">-->
-<!--                     <image>-->
-<!--                        <Image url="@icons/Heart-ECG-256.png" />-->
-<!--                     </image>-->
-<!--                  </ImageView>-->
-<!--                  <Label alignment="CENTER" layoutX="22.0" layoutY="190.0" prefHeight="17.0" prefWidth="168.0" text="ECG设备管理" textFill="WHITE">-->
-<!--                     <font>-->
-<!--                        <Font name="System Bold" size="17.0" />-->
-<!--                     </font>-->
-<!--                  </Label>-->
-<!--               </children>-->
-<!--            </Pane>-->
-<!--            <Pane layoutX="730.0" layoutY="109.0" prefHeight="256.0" prefWidth="217.0">-->
-<!--               <children>-->
-<!--                  <Button fx:id="buildingManagement" mnemonicParsing="false" onMouseClicked="#goToBuildingManagement" opacity="0.7" prefHeight="256.0" prefWidth="217.0" styleClass="button2" stylesheets="@studentMainView.css" />-->
-<!--                  <Circle layoutX="106.0" layoutY="109.0" radius="72.0" strokeType="INSIDE">-->
-<!--                     <fill>-->
-<!--                        <LinearGradient endX="1.0" endY="1.0" startY="0.4952380952380952">-->
-<!--                           <stops>-->
-<!--                              <Stop color="#4f79ff" />-->
-<!--                              <Stop color="WHITE" offset="0.9961685823754789" />-->
-<!--                              <Stop color="#4f79ff" offset="1.0" />-->
-<!--                           </stops>-->
-<!--                        </LinearGradient>-->
-<!--                     </fill>-->
-<!--                  </Circle>-->
-<!--                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="79.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">-->
-<!--                     <image>-->
-<!--                        <Image url="@icons/Office-01-256.png" />-->
-<!--                     </image>-->
-<!--                  </ImageView>-->
-<!--                  <Label alignment="CENTER" layoutX="71.0" layoutY="188.0" prefHeight="23.0" prefWidth="76.0" text="楼宇管理" textFill="WHITE">-->
-<!--                     <font>-->
-<!--                        <Font name="System Bold" size="17.0" />-->
-<!--                     </font>-->
-<!--                  </Label>-->
-<!--               </children>-->
-<!--            </Pane>-->
-<!--            <Label layoutX="334.0" layoutY="777.0" text="copyright@Deng-Yimo" textFill="#919191">-->
-<!--               <font>-->
-<!--                  <Font name="System Italic" size="13.0" />-->
-<!--               </font>-->
-<!--            </Label>-->
          </children>
       </Pane>
    </children>

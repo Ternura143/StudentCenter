@@ -97,7 +97,7 @@ public class CourseManagementViewController implements Initializable {
         double gpa = convertToGradePoints(totalGradePoints / numCourses);
 
 
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "课程成绩为：" + gpa);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Your GPA is: " + gpa);
             alert.show();
 
     }

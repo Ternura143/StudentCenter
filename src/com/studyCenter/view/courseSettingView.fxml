@@ -45,17 +45,17 @@
             </VBox>
             <VBox layoutX="53.0" layoutY="39.0" prefHeight="367.0" prefWidth="162.0" spacing="10.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="200.0" text="• 课程名称：" textFill="#ddd9d9">
+                  <Label prefHeight="35.0" prefWidth="200.0" text="• Course Name：" textFill="#ddd9d9">
                      <font>
                         <Font name="YouYuan" size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="35.0" prefWidth="200.0" text="• 课程编号：" textFill="#ddd9d9">
+                  <Label prefHeight="35.0" prefWidth="200.0" text="• Course No.：" textFill="#ddd9d9">
                      <font>
                         <Font name="YouYuan" size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="35.0" prefWidth="200.0" text="• 课程类别：" textFill="#ddd9d9">
+                  <Label prefHeight="35.0" prefWidth="200.0" text="• Course Category：" textFill="#ddd9d9">
                      <font>
                         <Font name="YouYuan" size="18.0" />
                      </font>
@@ -65,7 +65,7 @@
 <!--                        <Font name="YouYuan" size="18.0" />-->
 <!--                     </font>-->
 <!--                  </Label>-->
-                  <Label prefHeight="35.0" prefWidth="200.0" text="• 课程成绩：" textFill="#ddd9d9">
+                  <Label prefHeight="35.0" prefWidth="200.0" text="• Course Grade：" textFill="#ddd9d9">
                      <font>
                         <Font name="YouYuan" size="18.0" />
                      </font>

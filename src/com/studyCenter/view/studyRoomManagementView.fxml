@@ -49,15 +49,15 @@
             </ImageView>
             <Line endX="131.60003662109375" layoutX="143.0" layoutY="752.0" startX="-138.00001525878906" stroke="#b28cd1" />
             <ChoiceBox fx:id="studyAplicationCourseChoice" layoutX="44.0" layoutY="294.0" prefHeight="23.0" prefWidth="186.0" styleClass="button2" stylesheets="@courseManagementView.css" />
-            <Label layoutX="44.0" layoutY="336.0" prefHeight="22.0" prefWidth="115.0" text="使用时长(时)：" textFill="WHITE">
+            <Label layoutX="44.0" layoutY="336.0" prefHeight="22.0" prefWidth="115.0" text="Duration(h)" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <TextField fx:id="studyApplicationTimeField" layoutX="147.0" layoutY="334.0" prefHeight="30.0" prefWidth="84.0" />
-            <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" onAction="#studyRoomApplicationButtonFired" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="申请" />
-            <Button layoutX="149.0" layoutY="380.0" mnemonicParsing="false" onAction="#studyRoomRefresh" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="刷新" />
-            <Label layoutX="44.0" layoutY="259.0" text="课程安排：" textFill="WHITE">
+            <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" onAction="#studyRoomApplicationButtonFired" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="Apply" />
+            <Button layoutX="149.0" layoutY="380.0" mnemonicParsing="false" onAction="#studyRoomRefresh" prefHeight="31.0" prefWidth="64.0" styleClass="button2" stylesheets="@courseManagementView.css" text="Refresh" />
+            <Label layoutX="44.0" layoutY="259.0" text="Course Schedule：" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -70,8 +70,8 @@
             <Pane layoutX="329.0" layoutY="223.0" />
             <Pane layoutX="790.0" prefHeight="70.0" prefWidth="372.0" style="-fx-background-radius: 0 0 0 40; -fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);">
                <children>
-                  <TextField fx:id="studySearchField" layoutX="97.0" layoutY="17.0" onKeyPressed="#studySearchFieldKeyPressed" prefHeight="30.0" prefWidth="246.0" promptText="请输入要搜索的稀有设施种类..." />
-                  <Button layoutX="16.0" layoutY="20.0" mnemonicParsing="false" onAction="#studyRoomSearchButtonFired" prefHeight="23.0" prefWidth="63.0" styleClass="button4" stylesheets="@courseManagementView.css" text="查询" />
+                  <TextField fx:id="studySearchField" layoutX="97.0" layoutY="17.0" onKeyPressed="#studySearchFieldKeyPressed" prefHeight="30.0" prefWidth="246.0" promptText="Please enter the study room you want" />
+                  <Button layoutX="16.0" layoutY="20.0" mnemonicParsing="false" onAction="#studyRoomSearchButtonFired" prefHeight="23.0" prefWidth="63.0" styleClass="button4" stylesheets="@courseManagementView.css" text="Search" />
                </children>
             </Pane>
             <Label layoutX="440.0" layoutY="788.0" text="copyright@Deng-Yimo" textFill="#919191">

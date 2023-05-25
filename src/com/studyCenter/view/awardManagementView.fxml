@@ -60,16 +60,11 @@
       </AnchorPane>
       <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
          <children>
-<!--            <ImageView fitHeight="469.0" fitWidth="836.0" layoutX="166.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">-->
-<!--               <image>-->
-<!--                  <Image url="@gif/0761.gif_wh860.gif" />-->
-<!--               </image>-->
-<!--            </ImageView>-->
             <Pane layoutX="52.0" layoutY="-177.0" prefHeight="340.0" prefWidth="517.0" rotate="41.6" style="-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 70;" />
             <Pane layoutX="329.0" layoutY="223.0" />
             <Pane layoutX="868.0" prefHeight="70.0" prefWidth="294.0" style="-fx-background-radius: 0 0 0 40; -fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);">
                <children>
-                  <TextField fx:id="searchText" layoutX="26.0" layoutY="18.0" prefHeight="30.0" prefWidth="193.0" promptText="点击输入搜索内容" style="-fx-background-color: white; -fx-background-radius: 15;" />
+                  <TextField fx:id="searchText" layoutX="26.0" layoutY="18.0" prefHeight="30.0" prefWidth="193.0" promptText="Enter Search" style="-fx-background-color: white; -fx-background-radius: 15;" />
                   <ImageView fx:id="searchBtn" fitHeight="30.0" fitWidth="28.0" layoutX="246.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons/Search.png" />
