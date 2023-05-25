@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 /*
  * @Author DengYimo
  * @Date  5:01
- * @Description 这是员工新建员工界面的控制器类
+ * @Description 这是Student新建Student界面的控制器类
  * @Since version-1.0
  */
 public class   NewAwardViewController implements Initializable {

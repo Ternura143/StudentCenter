@@ -291,7 +291,7 @@ public class LoginViewController implements Initializable {
         AnimationType type = AnimationType.FADE;
 
         tray.setAnimationType(type);
-        tray.setTitle("默认管理员");
+        tray.setTitle("默认Teacher");
         tray.setMessage("账号：teacher\n密码: 123456");
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(3000));
@@ -303,7 +303,7 @@ public class LoginViewController implements Initializable {
         AnimationType type = AnimationType.FADE;
 
         tray.setAnimationType(type);
-        tray.setTitle("默认员工");
+        tray.setTitle("默认Student");
         tray.setMessage("账号: student\n密码: 123456");
         tray.setNotificationType(NotificationType.INFORMATION);
         tray.showAndDismiss(Duration.millis(100));

@@ -1,5 +1,5 @@
 
-/*调整“管理员入口”按钮，鼠标放在图标上时变色*/
+/*调整“Teacher入口”按钮，鼠标放在图标上时变色*/
 .toTeacherButton{
     -fx-background-color:#7156DD;
     -fx-background-radius: 200;
@@ -17,7 +17,7 @@
     -fx-border-style: solid;
 }
 
-/*调整“员工入口”按钮，鼠标放在图标上时变色*/
+/*调整“Student入口”按钮，鼠标放在图标上时变色*/
 .toStudentButton{
     -fx-background-color: #3F2B63;
     -fx-background-radius: 200;
@@ -35,7 +35,7 @@
     -fx-border-style: solid;
 }
 
-/*调整管理员页面的“LOGIN”按钮，鼠标放在图标上时变色*/
+/*调整Teacher页面的“LOGIN”按钮，鼠标放在图标上时变色*/
 .teacherLoginButton{
     -fx-border-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
     -fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
@@ -53,7 +53,7 @@
     -fx-border-style: solid;
 }
 
-/*调整员工页面的“LOGIN”按钮，鼠标放在图标上时变色*/
+/*调整Student页面的“LOGIN”按钮，鼠标放在图标上时变色*/
 .studentLoginButton{
     -fx-border-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);
     -fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);

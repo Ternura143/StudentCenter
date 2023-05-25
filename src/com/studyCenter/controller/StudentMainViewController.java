@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 /*
  * @Author DengYimo
  * @Date  5:03
- * @Description 这是员工主页面
+ * @Description 这是Student主页面
  * @Since version-1.0
  */
 public class StudentMainViewController {

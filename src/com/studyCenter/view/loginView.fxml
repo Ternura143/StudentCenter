@@ -105,12 +105,12 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <JFXButton fx:id="toTeacherPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn" prefHeight="39.0" prefWidth="135.0" styleClass="toTeacherButton" stylesheets="@styleSheets.css" text="管理员入口">
+            <JFXButton fx:id="toTeacherPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn" prefHeight="39.0" prefWidth="135.0" styleClass="toTeacherButton" stylesheets="@styleSheets.css" text="Teacher入口">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="toStudentPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="135.0" styleClass="toStudentButton" stylesheets="@styleSheets.css" text="员工入口">
+            <JFXButton fx:id="toStudentPage" buttonType="RAISED" layoutX="84.0" layoutY="262.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="135.0" styleClass="toStudentButton" stylesheets="@styleSheets.css" text="Student入口">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

@@ -22,25 +22,11 @@ public class ModelListShow {
         this.content = content;
         this.mode = mode;
     }
-/*
- * @Author DengYimo
- * @Date  4:46
- * @Description This is description of method
- * @Param []
- * @Return java.lang.String
- * @Since version-1.0
- */
+
     public String getMode() {
         return mode;
     }
-/*
- * @Author DengYimo
- * @Date  4:46
- * @Description This is description of method
- * @Param [mode]
- * @Return void
- * @Since version-1.0
- */
+
     public void setMode(String mode) {
         this.mode = mode;
     }

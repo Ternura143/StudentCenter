@@ -29,7 +29,7 @@ public class UserManager {
      * 用于验证密码输入的重要方法，并将所对应的身份信息写入本地currentUser变量，等待下一个界面读取
      * @param account 输入的账户
      * @param password 输入的密码
-     * @param role  角色 1=管理员，2=员工
+     * @param role  角色 1=Teacher，2=Student
      * @return  boolean 表示密码验证成功与否
      */
     public boolean CheckLogin(String account, String password, int role){
