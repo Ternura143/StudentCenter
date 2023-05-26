@@ -71,11 +71,6 @@
       </AnchorPane>
       <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
          <children>
-<!--            <ImageView fitHeight="580.0" fitWidth="979.0" layoutX="81.0" layoutY="144.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">-->
-<!--               <image>-->
-<!--                  <Image url="@gif/0761.gif_wh860.gif" />-->
-<!--               </image>-->
-<!--            </ImageView>-->
             <Pane layoutX="52.0" layoutY="-177.0" prefHeight="340.0" prefWidth="517.0" rotate="41.6" style="-fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%); -fx-background-radius: 70;" />
             <Pane layoutX="329.0" layoutY="223.0" />
             <Pane layoutX="813.0" prefHeight="70.0" prefWidth="349.0" style="-fx-background-radius: 0 0 0 40; -fx-background-color: linear-gradient(to bottom left, #0250c5 0%, #d43f8d 100%);">
@@ -93,19 +88,12 @@
                   </ImageView>
                </children>
             </Pane>
-<!--            <Label layoutX="440.0" layoutY="788.0" text="copyright@Deng-Yimo" textFill="#919191">-->
-<!--               <font>-->
-<!--                  <Font name="System Italic" size="13.0" />-->
-<!--               </font>-->
-<!--            </Label>-->
             <TableView fx:id="tableView" layoutX="80.0" layoutY="143.0" opacity="0.73" prefHeight="580.0" prefWidth="979.0" style="-fx-background-color: #2F2B43;" stylesheets="@mainView.css">
                <columns>
                   <TableColumn fx:id="courseNameCol" prefWidth="75.0" text="Course Name" />
                   <TableColumn fx:id="courseIDCol" prefWidth="75.0" text="Course No." />
                   <TableColumn fx:id="categoryCol" prefWidth="75.0" text="Course Category" />
                   <TableColumn fx:id="scoreCol" prefWidth="75.0" text="Course Grade" />
-<!--                  <TableColumn fx:id="ECPCol" prefWidth="75.0" text="紧急联系人" />-->
-<!--                  <TableColumn fx:id="ECNCol" prefWidth="75.0" text="紧急联系电话" />-->
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

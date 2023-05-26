@@ -33,8 +33,6 @@
                   <TextField fx:id="categoryField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
                   <TextField fx:id="idField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
                   <TextField fx:id="scoreField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
-<!--                  <TextField fx:id="ECPField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
-<!--                  <TextField fx:id="ECNField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
                </children>
                <opaqueInsets>
                   <Insets bottom="10.0" top="10.0" />
@@ -97,11 +95,6 @@
                         <Font name="YouYuan" size="12.0" />
                      </font>
                   </Label>
-<!--                  <Hyperlink prefHeight="21.0" prefWidth="151.0" text="Student Center Regulation" textFill="#d7bf0e" textOverrun="WORD_ELLIPSIS" underline="true">-->
-<!--                     <font>-->
-<!--                        <Font name="Tiger" size="12.0" />-->
-<!--                     </font>-->
-<!--                  </Hyperlink>-->
                </children>
             </HBox>
             <Label alignment="CENTER" layoutX="201.0" layoutY="-83.0" prefHeight="42.0" prefWidth="151.0" text="SETTING" textFill="#ddd9d9">

@@ -32,8 +32,6 @@
                   <TextField fx:id="courseIDField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
                   <TextField fx:id="categoryField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
                   <TextField fx:id="scoreField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />
-<!--                  <TextField fx:id="ECPField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
-<!--                  <TextField fx:id="ECNField" prefHeight="35.0" prefWidth="200.0" promptText="Click to Enter" styleClass="textField" stylesheets="@settingStudent.css" />-->
                </children>
                <opaqueInsets>
                   <Insets bottom="10.0" top="10.0" />
