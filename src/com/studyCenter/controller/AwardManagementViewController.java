@@ -18,6 +18,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * @className: AwardManagementViewController
+ * @description: the controller of the award management page
+
+ */
 public class AwardManagementViewController implements Initializable {
     @FXML
     private JFXButton backToMain;
@@ -39,14 +44,30 @@ public class AwardManagementViewController implements Initializable {
 
     private ObservableList<ModelListShow> MLSObservableList = FXCollections.observableArrayList();
 
+
+    /**
+     * @param controller
+     * @return void
+     * @description set the parent controller of the award management page
+     */
     public void setParentController(StudentMainViewController controller) {
         studentMainViewController = controller;
     }
 
+    /**
+     * @param controller
+     * @return void
+     * @description set the parent controller of the show award page
+     */
     public void setParentControllerShow(ShowAwardViewController controller) {
         showAwardViewController = controller;
     }
 
+    /**
+     * @param event
+     * @return void
+     * @description back to the main page
+     */
     public void backToMainPage(MouseEvent event) {
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerAwardManagement(this);
@@ -54,6 +75,12 @@ public class AwardManagementViewController implements Initializable {
         currentStage.close();
     }
 
+    /**
+     * @param location
+     * @param resources
+     * @return void
+     * @description initialize the table view of the award management page
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -66,6 +93,11 @@ public class AwardManagementViewController implements Initializable {
         modeCol.setCellValueFactory(new PropertyValueFactory<ModelListShow, String>("mode"));
     }
 
+    /**
+     * @param event
+     * @return void
+     * @description delete the selected award
+     */
     @FXML
     public void delAward(MouseEvent event) {
         if (tableView.getSelectionModel().getSelectedItems().size() >= 1) {
@@ -86,6 +118,11 @@ public class AwardManagementViewController implements Initializable {
         }
     }
 
+    /**
+     * @param event
+     * @return void
+     * @description show the selected award
+     */
     @FXML
     public void showAward(MouseEvent event) {
         ShowAwardViewController controller = (ShowAwardViewController) ViewManager.newWindow("showAwardView.fxml");
