@@ -19,12 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description 这是病人管理主页面的控制器类
- * @Since version-1.0
- */
+
 public class CourseManagementViewController implements Initializable {
     @FXML
     private JFXButton newFileBtn;
