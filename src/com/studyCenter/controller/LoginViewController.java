@@ -82,7 +82,6 @@ public class LoginViewController implements Initializable {
     @FXML
     private Label Exit;
 
-//    private TeacherMainViewController teacherMainViewController;
     private StudentMainViewController studentMainViewController;
 
     @Override
@@ -184,7 +183,7 @@ public class LoginViewController implements Initializable {
 
     @FXML
     private void studentLoginBtn() {
-        if("student".equals(studentUsername.getText())||"user".equals(studentUsername.getText())||"西天主".equals(studentUsername.getText())||"红孩儿".equals(studentUsername.getText())||"牛魔王".equals(studentUsername.getText())||"孙悟空".equals(studentUsername.getText())&&"123456".equals(studentPassword.getText())){
+        if("student".equals(studentUsername.getText())||"user1".equals(studentUsername.getText())||"user2".equals(studentUsername.getText())||"user3".equals(studentUsername.getText())||"user4".equals(studentUsername.getText())&&"123456".equals(studentPassword.getText())){
             studentSign();
             Stage stage = (Stage)Exit.getScene().getWindow();
             stage.close();
@@ -198,7 +197,7 @@ public class LoginViewController implements Initializable {
             tray.setMessage(message);
             tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(3000));
-        }else if (!"student".equals(studentUsername.getText()) || !"123456".equals(studentPassword.getText())){
+        }else if ("student".equals(studentUsername.getText()) && "123456".equals(studentPassword.getText())){
             String tilte = "Sign In";
             String message = "Error Student Information ";
             TrayNotification tray = new TrayNotification();
@@ -219,16 +218,9 @@ public class LoginViewController implements Initializable {
     }
 
 
-//    private void teacherSign() {
-//        TeacherMainViewController controller = (TeacherMainViewController) ViewManager.newWindow("teacherMainView.fxml");
-//        controller.setParentController(this);
-//    }
-
-
     @FXML
     private void teacherLoginBtn() {
         if("teacher".equals(teacherUserName.getText())&&"123456".equals(teacherPassword.getText())){
-//            teacherSign();
             Stage stage = (Stage)Exit.getScene().getWindow();
             stage.close();
             TrayNotification tray = new TrayNotification();
@@ -304,9 +296,6 @@ public class LoginViewController implements Initializable {
         tray.showAndDismiss(Duration.millis(100));
     }
 
-//    public void setParentControllerTeacher(TeacherMainViewController controller) {
-//        teacherMainViewController = controller;
-//    }
 
     public void setParentControllerStudent(StudentMainViewController controller) {
         studentMainViewController = controller;
