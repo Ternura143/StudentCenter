@@ -60,4 +60,4 @@ public class GsonUtil {
 
 }
 
-// please write the junit test case for this class
+

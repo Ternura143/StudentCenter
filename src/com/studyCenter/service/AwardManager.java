@@ -27,6 +27,9 @@ public class AwardManager implements AbstractAward {
     private long awardId = 1;
     private static AwardManager singletonInstance;
 
+    public void setAwards(List<Award> awards) {
+        this.awards = awards;
+    }
 
     public long getAwardId() {
         return awardId;
@@ -66,3 +69,4 @@ public class AwardManager implements AbstractAward {
         return awards;
     }
 }
+

@@ -45,3 +45,4 @@ public class CourseManager implements AbstractCourse {
         return courses;
     }
 }
+

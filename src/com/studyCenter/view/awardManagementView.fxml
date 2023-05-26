@@ -72,11 +72,6 @@
                   </ImageView>
                </children>
             </Pane>
-            <Label layoutX="440.0" layoutY="788.0" text="copyright@Deng-Yimo" textFill="#919191">
-               <font>
-                  <Font name="System Italic" size="13.0" />
-               </font>
-            </Label>
             <TableView fx:id="tableView" layoutX="165.0" layoutY="167.0" opacity="0.73" prefHeight="487.0" prefWidth="836.0" style="-fx-background-color: #2F2B43;" stylesheets="@mainView.css">
                <columns>
                   <TableColumn fx:id="idCol" prefWidth="75.0" text="Award ID" />

@@ -74,11 +74,6 @@
                   <Button layoutX="16.0" layoutY="20.0" mnemonicParsing="false" onAction="#studyRoomSearchButtonFired" prefHeight="23.0" prefWidth="63.0" styleClass="button4" stylesheets="@courseManagementView.css" text="Search" />
                </children>
             </Pane>
-            <Label layoutX="440.0" layoutY="788.0" text="copyright@Deng-Yimo" textFill="#919191">
-               <font>
-                  <Font name="System Italic" size="13.0" />
-               </font>
-            </Label>
             <AnchorPane layoutX="56.0" layoutY="86.0" minHeight="0.0" minWidth="0.0" prefHeight="636.0" prefWidth="1055.0">
                <children>
                   <VBox layoutX="213.0" layoutY="75.0" prefHeight="536.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
