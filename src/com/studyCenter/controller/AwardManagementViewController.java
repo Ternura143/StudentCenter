@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
- * The controller of the award management page of the student
+ * the controller of the award management page of the student
  */
 public class AwardManagementViewController implements Initializable {
     @FXML

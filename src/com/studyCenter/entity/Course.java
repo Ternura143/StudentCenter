@@ -1,5 +1,8 @@
 package com.studyCenter.entity;
 
+/**
+ * course entity
+ */
 public class Course {
     private String courseName;
     private String courseID;

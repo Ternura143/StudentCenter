@@ -5,6 +5,15 @@ import com.studyCenter.util.FileOperator;
 
 import java.util.List;
 
+/**
+ * MLSManager is a singleton class that manages the ModelListShow objects.
+ * It implements the AbstractTSM interface.
+ * It has a list of ModelListShow objects.
+ * It has a private constructor and a public static method getInstance() to get the singleton instance.
+ * It has a method addModelListShow() to add an ModelListShow object to the list.
+ * It has a method removeModelListShow() to remove an ModelListShow object from the list.
+ * It has a method getModelListShows() to get the list of ModelListShow objects.
+ */
 public class MLSManager {
     private List<ModelListShow> modelListShowList;
     private static MLSManager singletonInstance;

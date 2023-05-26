@@ -3,11 +3,9 @@ package com.studyCenter.entity.building;
 import com.studyCenter.entity.Course;
 
 import java.io.Serializable;
-/*
- * @Author DengYimo
- * @Date  4:53
- * @Description This is description of class
- * @Since version-1.0
+
+/**
+ * seat entity
  */
 public class Seat implements Serializable {
     private String name;

@@ -4,9 +4,19 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * File operator
+ */
 public class FileOperator {
 
 
+    /**
+     * read data from file and convert to object
+     * @param fileName file name
+     * @param c class of object
+     * @return object list
+     */
     public static List loadData(String fileName, Class<?> c) {
         List ret = new ArrayList<>();
         try {
@@ -26,6 +36,11 @@ public class FileOperator {
     }
 
 
+    /**
+     * write object to file
+     * @param object object to write
+     * @param filename file name
+     */
     public static void writeData(Object object, String filename) {
         try {
             String fileName = "data/" + filename;
@@ -41,6 +56,11 @@ public class FileOperator {
     }
 
 
+    /**
+     * write object list to file
+     * @param objectList object list to write
+     * @param filename file name
+     */
     public static void writeData(List objectList, String filename) {
         try {
             String fileName = "data/" + filename;

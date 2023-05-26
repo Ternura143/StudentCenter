@@ -1,5 +1,8 @@
 package com.studyCenter.entity;
 
+/**
+ * award show entity
+ */
 public class AwardShow {
     private String id;
     private String content;

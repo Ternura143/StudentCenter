@@ -6,6 +6,15 @@ import com.studyCenter.util.FileOperator;
 
 import java.util.List;
 
+/**
+ * AwardShowManager is a singleton class that manages the AwardShow objects.
+ * It implements the AbstractTSM interface.
+ * It has a list of AwardShow objects.
+ * It has a private constructor and a public static method getInstance() to get the singleton instance.
+ * It has a method addAwardShow() to add an AwardShow object to the list.
+ * It has a method removeAwardShow() to remove an AwardShow object from the list.
+ * It has a method getAwardShows() to get the list of AwardShow objects.
+ */
 public class AwardShowManager implements AbstractTSM {
         private List<AwardShow> awards;
         private static AwardShowManager singletonInstance;

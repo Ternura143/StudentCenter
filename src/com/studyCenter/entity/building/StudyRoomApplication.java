@@ -4,11 +4,9 @@ import com.studyCenter.entity.Course;
 
 import java.io.Serializable;
 import java.util.Date;
-/*
- * @Author DengYimo
- * @Date  4:51
- * @Description This is description of class
- * @Since version-1.0
+
+/**
+ * study room application entity
  */
 public class StudyRoomApplication implements Serializable {
     public static long TIMESCALE = 1000 * 60 * 60;

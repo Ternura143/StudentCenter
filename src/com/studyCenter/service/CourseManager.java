@@ -5,6 +5,15 @@ import com.studyCenter.entity.Course;
 import com.studyCenter.util.FileOperator;
 import java.util.List;
 
+/**
+ * CourseManager is a singleton class that manages the Course objects.
+ * It implements the AbstractCourse interface.
+ * It has a list of Course objects.
+ * It has a private constructor and a public static method getInstance() to get the singleton instance.
+ * It has a method addCourse() to add an Course object to the list.
+ * It has a method removeCourse() to remove an Course object from the list.
+ * It has a method getCourses() to get the list of Course objects.
+ */
 public class CourseManager implements AbstractCourse {
     private final List<Course> courses;
     private static CourseManager singletonInstance;

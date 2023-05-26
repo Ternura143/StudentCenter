@@ -6,10 +6,27 @@ import com.studyCenter.entity.Award;
 import com.studyCenter.util.FileOperator;
 import java.util.List;
 
+/**
+ * AwardManager is a singleton class that manages the Award objects.
+ * It implements the AbstractAward interface.
+ * It has a list of Award objects and a long variable awardId.
+ * It has a private constructor and a public static method getInstance() to get the singleton instance.
+ * It has a method addAward() to add an Award object to the list.
+ * It has a method removeAward() to remove an Award object from the list.
+ * It has a method getAwards() to get the list of Award objects.
+ * It has a method getAwardId() to get the awardId.
+ * It has a method setAwardId() to set the awardId.
+ * It has a method setAwards() to set the list of Award objects.
+ * It has a method setInstance() to set the singleton instance.
+ * It has a method setAwardId() to set the awardId.
+ * It has a method setAwards() to set the list of Award objects.
+ * It has a method setInstance() to set the singleton instance.
+ */
 public class AwardManager implements AbstractAward {
     private List<Award> awards;
     private long awardId = 1;
     private static AwardManager singletonInstance;
+
 
     public long getAwardId() {
         return awardId;
@@ -31,6 +48,8 @@ public class AwardManager implements AbstractAward {
         }
         return singletonInstance;
     }
+
+
     //Add
     public boolean addAward(Award award) {
         awards.add(award);

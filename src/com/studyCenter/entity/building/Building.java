@@ -3,9 +3,13 @@ package com.studyCenter.entity.building;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * building entity
+ */
 public class Building implements Serializable {
     private String name;
     private ArrayList<Level> levels;
+
 
     public Building() {
         levels = new ArrayList<Level>();

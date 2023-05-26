@@ -1,5 +1,8 @@
 package com.studyCenter.entity;
 
+/**
+ * abstract user entity
+ */
 public abstract class AbstractUser {
     private String account;
     private String password;

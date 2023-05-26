@@ -3,11 +3,9 @@ package com.studyCenter.entity.building;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
-/*
- * @Author DengYimo
- * @Date  4:50
- * @Description This is description of class
- * @Since version-1.0
+
+/**
+ * room entity
  */
 public class Room implements Serializable {
     public final static String[] RARETYPES = {"Study Room 1", "Study Room 2", "Study Room 3", "Study Room 4"};

@@ -10,26 +10,19 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.util.Objects;
-/*
- * @Author DengYimo
- * @Date  4:33
- * @Description 此类为运行主界面基本类，所有程序由此开始。
- * @Param 
- * @Return 
- * @Since version-1.0
+
+/**
+ * This class is used to run the application
  */
 public class testRun extends Application {
-    //用于拖拽效果的实现。
     private double xOffSet;
     private double yOffSet;
 
-    /*
-     * @Author：DengYimo
-     * @Date  4:19
-     * @Description 重写start方法，用于启动
-     * @Param [primaryStage]
-     * @Return void
-     * @Since version-1.0
+
+    /**
+     * This method is used to start the application
+     * @param primaryStage the stage to be displayed
+     * @throws Exception if the fxml file is not found
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -52,13 +45,10 @@ public class testRun extends Application {
         primaryStage.show();
     }
     
-    /*
-     * @Author：DengYimo
-     * @Date  4:19
-     * @Description This is description of method
-     * @Param [args]
-     * @Return void
-     * @Since version-1.0
+
+    /**
+     * This method is used to launch the application
+     * @param args the arguments to be passed
      */
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.version"));

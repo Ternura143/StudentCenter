@@ -6,6 +6,14 @@ import com.studyCenter.util.FileOperator;
 
 import java.util.List;
 
+/**
+ * UserManager is a singleton class that manages the User objects.
+ * It has a list of User objects.
+ * It has a private constructor and a public static method getInstance() to get the singleton instance.
+ * It has a method addTeacher() to add an Teacher object to the list.
+ * It has a method removeTeacher() to remove an Teacher object from the list.
+ * It has a method getTeachers() to get the list of Teacher objects.
+ */
 public class UserManager {
     private List<Student> students;
 //    private  List<Teacher> teachers;
@@ -22,25 +30,17 @@ public class UserManager {
 
     private UserManager() {
         students =  FileOperator.loadData("Students.json", Student.class);
-//        teachers = FileOperator.loadData("Teachers.json", Teacher.class);
     }
 
+
     /**
-     * 用于验证密码输入的重要方法，并将所对应的身份信息写入本地currentUser变量，等待下一个界面读取
-     * @param account 输入的账户
-     * @param password 输入的密码
-     * @param role  角色 1=Teacher，2=Student
-     * @return  boolean 表示密码验证成功与否
+     * CheckLogin is a method that checks if the account and password are correct.
+     * @param account account of the user
+     * @param password password of the user
+     * @param role role of the user
+     * @return true if the account and password are correct, false otherwise
      */
     public boolean CheckLogin(String account, String password, int role){
-//        if (role == 1) {    // Teacher
-//            for (Teacher localTeacher : teachers) {
-//                if(localTeacher.getAccount().equals(account) && localTeacher.getPassword().equals(password)) {
-//                    currentUser = localTeacher;
-//                    return true;
-//                }
-//            }
-//        }
         if (role == 2) {    // Student
             for (Student localStudent : students) {
                 if (localStudent.getAccount().equals(account) && localStudent.getPassword().equals(password)) {
@@ -52,15 +52,6 @@ public class UserManager {
         return false;
     }
 
-//    public boolean addTeacher(Teacher teacher) {
-//        for (Teacher localTeacher : teachers) {
-//            if (teacher.getAccount().equals(localTeacher.getAccount()))
-//                return false;
-//        }
-//        teachers.add(teacher);
-//        FileOperator.writeData(teacher, "Teachers.json");
-//        return true;
-//    }
 
     public boolean addStudent(Student student) {
         for (Student localStudent : students) {
@@ -72,18 +63,6 @@ public class UserManager {
         return true;
     }
 
-//    public boolean removeTeacher(AbstractUser user) {
-//        if (user.getClass() == Teacher.class) {
-//            teachers.remove(user);
-//            FileOperator.writeData(teachers, "Teachers.json");
-//            return true;
-//        } else if (user.getClass() == Student.class) {
-//            students.remove(user);
-//            FileOperator.writeData(students, "Teachers.json");
-//            return true;
-//        }
-//        return false;
-//    }
 
     public boolean removeStudent(AbstractUser user) {
         if (user.getClass() == Student.class) {
@@ -98,11 +77,4 @@ public class UserManager {
         return students;
     }
 
-//    public AbstractUser getCurrentUser() {
-//        return currentUser;
-//    }
-//
-//    public List<Teacher> getTeachers() {
-//        return teachers;
-//    }
 }

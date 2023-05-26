@@ -1,9 +1,8 @@
 package com.studyCenter.entity;
-/*
- * @Author DengYimo
- * @Date  4:36
- * @Description This is description of class
- * @Since version-1.0
+
+
+/**
+ * student entity
  */
 public class Student extends AbstractUser {
     private String birthday;

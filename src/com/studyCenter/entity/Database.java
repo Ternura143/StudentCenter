@@ -6,16 +6,13 @@ import com.studyCenter.entity.building.Building;
 
 import java.io.*;
 import java.util.ArrayList;
-/*
- * @Author DengYimo
- * @Date  4:47
- * @Description This is description of class
- * @Since version-1.0
+
+/**
+ * database entity
  */
 public class Database implements Serializable {
 
     private ArrayList<Building> buildings = new ArrayList<Building>();
-//    private ArrayList<CheckInInfo> checkInInfos = new ArrayList<CheckInInfo>();
     private static Database singleton;
 
     private Database() {
@@ -47,17 +44,9 @@ public class Database implements Serializable {
 
         String jsonString = JSON.toJSONString(Database.getInstance().getBuildings());
         StringtoFile(jsonString, path + "buildings.json");
-//        jsonString = JSON.toJSONString(Database.getInstance().getCheckInInfos());
-//        StringtoFile(jsonString, path + "checkInInfos.json");
+
     }
 
-//    public ArrayList<CheckInInfo> getCheckInInfos() {
-//        return checkInInfos;
-//    }
-
-//    public void setCheckInInfos(ArrayList<CheckInInfo> checkInInfos) {
-//        this.checkInInfos = checkInInfos;
-//    }
 
     public static void readFromFile() {
         String path = ".\\data\\";
@@ -69,21 +58,9 @@ public class Database implements Serializable {
             jsonString = readJson(file);
             singleton.setBuildings(new ArrayList<Building>(JSONArray.parseArray(jsonString, Building.class)));
         }
-//        file = new File(path + "checkInInfos.json");
-//        if (file.exists()) {
-//            jsonString = readJson(file);
-//            singleton.setCheckInInfos(new ArrayList<CheckInInfo>(JSONArray.parseArray(jsonString, CheckInInfo.class)));
-//        }
 
     }
-/*
- * @Author DengYimo
- * @Date  4:48
- * @Description This is description of method
- * @Param [file]
- * @Return java.lang.String
- * @Since version-1.0
- */
+
     public static String readJson(File file) {
         if (!file.exists()) {
             return "";
@@ -98,13 +75,11 @@ public class Database implements Serializable {
                 else line += tmp;
             }
         } catch (Exception e) {
-            // TODO: handle exception
         } finally {
             try {
                 if (bufr != null)
                     bufr.close();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
@@ -118,7 +93,6 @@ public class Database implements Serializable {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -135,7 +109,6 @@ public class Database implements Serializable {
                 if (outPutStream != null)
                     outPutStream.close();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }

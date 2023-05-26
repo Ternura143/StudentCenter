@@ -5,20 +5,16 @@ import com.studyCenter.service.AwardManager;
 import java.io.Serializable;
 
 
+/**
+ * award entity
+ */
 public class Award implements Serializable {
     public final static String[] TYPES = {"A", "B", "C"};
-//    private ArrayList<Award> problems = new ArrayList<Award>();
     private String name = "";
     private String type = "A";
     private long id = 0;
 
-//    public ArrayList<Award> getAwards() {
-//        return problems;
-//    }
 
-//    public void setAwards(ArrayList<Award> problems) {
-//        this.problems = problems;
-//    }
 
     public String getName() {
         return name;

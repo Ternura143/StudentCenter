@@ -10,10 +10,19 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class is used to manage the views of the application
+ */
 public class ViewManager {
     private static double yOffSet;
     private static double xOffSet;
 
+    /**
+     * This method is used to create a new window
+     *
+     * @param fxmlFileName the name of the fxml file to be loaded
+     * @return the controller of the fxml file
+     */
     public static Object newWindow(String fxmlFileName) {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
@@ -37,6 +46,12 @@ public class ViewManager {
         return loader.getController();
     }
 
+    /**
+     * This method is used to get the pane of a fxml file
+     *
+     * @param fxmlFileName the name of the fxml file to be loaded
+     * @return the pane of the fxml file
+     */
     public static AnchorPane getPane(String fxmlFileName) {
         AnchorPane pane = null;
         try {
