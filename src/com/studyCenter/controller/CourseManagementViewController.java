@@ -20,6 +20,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+
+/**
+ * the controller of the course management page
+ */
 public class CourseManagementViewController implements Initializable {
     @FXML
     private JFXButton newFileBtn;
@@ -29,8 +33,6 @@ public class CourseManagementViewController implements Initializable {
     private JFXButton modFileBtn;
     @FXML
     private JFXButton gpaBtn;
-//    @FXML
-//    private JFXButton evaBtn;
     @FXML
     private ImageView searchBtn;
     @FXML
@@ -49,18 +51,19 @@ public class CourseManagementViewController implements Initializable {
     private TableColumn<Course, String> categoryCol;
     @FXML
     private TableColumn<Course, String> scoreCol;
-//    @FXML
-//    private TableColumn<Course, String> ECPCol;
-//    @FXML
-//    private TableColumn<Course, String> ECNCol;
+
 
     private List<Course> searchedList = new ArrayList<Course>();
 
     private StudentMainViewController studentMainViewController;
-//    private EvaluateViewController evaluateViewController;
 
     private ObservableList<Course> courseObservableList = FXCollections.observableArrayList();
 
+    /**
+     * set the parent controller of the course management page and initialize the table view
+     * @param location the location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resources resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -75,12 +78,14 @@ public class CourseManagementViewController implements Initializable {
 
     }
 
+    /**
+     * set the parent controller of the course management page
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     public void gpaCalculate(MouseEvent event) {
         double totalGradePoints = 0;
         int numCourses = 0;
-
-
 
         for (Course course : tableView.getItems()) {
             String gradeText = scoreCol.getCellObservableValue(course).getValue();
@@ -91,12 +96,16 @@ public class CourseManagementViewController implements Initializable {
 
         double gpa = convertToGradePoints(totalGradePoints / numCourses);
 
-
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Your GPA is: " + gpa);
             alert.show();
 
     }
 
+    /**
+     * set the parent controller of the course management page
+     * @param grade the grade to be converted to grade points
+     * @return double
+     */
     public double convertToGradePoints(double grade) {
         if (grade >= 90) {
             return 4.0;
@@ -112,6 +121,10 @@ public class CourseManagementViewController implements Initializable {
     }
 
 
+    /**
+     * modify course information in the table view
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     public void modifyCourse(MouseEvent event) {
         int selectedIndex = tableView.getSelectionModel().getSelectedIndex();
@@ -122,11 +135,15 @@ public class CourseManagementViewController implements Initializable {
             controller.setParentController(this);
         } else {
             Alert nullWarning = new Alert(Alert.AlertType.ERROR, "Please select a course in the table");
-            nullWarning.setHeaderText("No courses selected！");
+            nullWarning.setHeaderText("No courses selected");
             nullWarning.show();
         }
     }
 
+    /**
+     * delete course information from the table view
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     void removeCourse(MouseEvent event) {
         if (tableView.getSelectionModel().getSelectedItems().size() >= 1) {
@@ -142,17 +159,25 @@ public class CourseManagementViewController implements Initializable {
             }
         } else {
             Alert nullWarning = new Alert(Alert.AlertType.ERROR, "Please select at least one course in the table");
-            nullWarning.setHeaderText("None of the courses selected！");
+            nullWarning.setHeaderText("None of the courses selected");
             nullWarning.show();
         }
     }
 
+    /**
+     * create a new course
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     public void createNewAccount(MouseEvent event) {
         NewCourseViewController controller = (NewCourseViewController) ViewManager.newWindow("newCourseView.fxml");
         controller.setParentController(this);
     }
 
+    /**
+     * search by name in the table view and display the search results
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     public void searchByName(MouseEvent event) {
         searchedList.clear();
@@ -172,34 +197,34 @@ public class CourseManagementViewController implements Initializable {
         scoreCol.setCellValueFactory(new PropertyValueFactory<Course, String>("score"));
     }
 
+    /**
+     * cancel search and display all the courses in the table view
+     * @param event the mouse event that triggered the method call
+     */
     @FXML
     public void cancelSearch(MouseEvent event) {
         initialize(null, null);
         searchText.setText("");
     }
 
+    /**
+     * set parent controller
+     * @param controller the controller of the main page
+     */
     public void setParentController(StudentMainViewController controller) {
         studentMainViewController = controller;
     }
 
-//    public void setParentControllerEva(EvaluateViewController controller) {
-//        evaluateViewController = controller;
-//    }
 
+    /**
+     * back to main page and close the current window
+     * @param event the mouse event that triggered the method call
+     */
     public void backToMainPage(MouseEvent event) {
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerCourseManagement(this);
         Stage currentStage = (Stage) backToMain.getScene().getWindow();
         currentStage.close();
     }
-
-//    @FXML
-//    public void goToEvaluate(MouseEvent event){
-//        EvaluateViewController controller = (EvaluateViewController) ViewManager.newWindow("evaluateView.fxml");
-//        controller.setParentController(this);
-//        Stage currentStage = (Stage) evaBtn.getScene().getWindow();
-//        currentStage.close();
-//    }
-
 
 }

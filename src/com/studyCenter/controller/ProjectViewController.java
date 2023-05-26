@@ -5,11 +5,9 @@ import com.studyCenter.view.ViewManager;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-/*
- * @Author DengYimo
- * @Date  4:57
- * @Description 这事拓展页面的控制器类
- * @Since version-1.0
+
+/**
+the controller of the project view page
  */
 public class ProjectViewController {
     @FXML
@@ -17,10 +15,18 @@ public class ProjectViewController {
 
     private StudentMainViewController studentMainViewController;
 
+    /**
+     * set the parent controller of this controller
+     * @param controller the parent controller
+    */
     public void setParentController(StudentMainViewController controller) {
         studentMainViewController = controller;
     }
 
+    /**
+     * back to the main page
+     * @param event the mouse event of the button clicked
+    */
     public void backToMainPage(MouseEvent event){
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerProject(this);

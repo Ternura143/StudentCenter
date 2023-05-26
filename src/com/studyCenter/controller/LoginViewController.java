@@ -24,6 +24,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
+/**
+ * controller of the login page of the student
+ */
 public class LoginViewController implements Initializable {
     @FXML
     private StackPane basicLayer;
@@ -84,6 +87,11 @@ public class LoginViewController implements Initializable {
 
     private StudentMainViewController studentMainViewController;
 
+    /**
+     * initialize the controller of the login page of the student
+     * @param url url of the fxml file of the controller
+     * @param rb resource bundle of the fxml file of the controller
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         s1.setVisible(false);
@@ -101,6 +109,10 @@ public class LoginViewController implements Initializable {
         studentPassword.setVisible(true);
     }
 
+    /**
+     * switch to the student main page
+     * @param event event of the mouse click
+     */
     @FXML
     private void btn(MouseEvent event) {
         TranslateTransition slide = new TranslateTransition();
@@ -141,6 +153,10 @@ public class LoginViewController implements Initializable {
         }));
     }
 
+    /**
+     * switch to the teacher main page
+     * @param event event of the mouse click
+     */
     @FXML
     private void btn2(MouseEvent event) {
         TranslateTransition slide = new TranslateTransition();
@@ -181,6 +197,9 @@ public class LoginViewController implements Initializable {
         }));
     }
 
+    /**
+     * login as a student
+     */
     @FXML
     private void studentLoginBtn() {
         if("student".equals(studentUsername.getText())||"user1".equals(studentUsername.getText())||"user2".equals(studentUsername.getText())||"user3".equals(studentUsername.getText())||"user4".equals(studentUsername.getText())&&"123456".equals(studentPassword.getText())){
@@ -212,12 +231,18 @@ public class LoginViewController implements Initializable {
 
     }
 
+    /**
+     * sign in as a student
+     */
     private void studentSign() {
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
         controller.setParentControllerLogin(this);
     }
 
 
+    /**
+     * login as a teacher
+     */
     @FXML
     private void teacherLoginBtn() {
         if("teacher".equals(teacherUserName.getText())&&"123456".equals(teacherPassword.getText())){
@@ -242,6 +267,10 @@ public class LoginViewController implements Initializable {
         }
     }
 
+    /**
+     * switch to the teacher main page
+     * @param event event of the mouse click
+     */
     @FXML
     void enterPressedTeacher(KeyEvent event) throws Exception {
         if(event.getCode() == KeyCode.ENTER) {
@@ -249,6 +278,10 @@ public class LoginViewController implements Initializable {
         }
     }
 
+    /**
+     * switch to the student main page
+     * @param event event of the mouse click
+     */
     @FXML
     void enterPressedStudent(KeyEvent event) throws Exception {
         if(event.getCode() == KeyCode.ENTER) {
@@ -256,22 +289,38 @@ public class LoginViewController implements Initializable {
         }
     }
 
+    /**
+     * exit the login page
+     * @param event event of the mouse click
+     */
     @FXML
     public void exitLoginPage(MouseEvent event){
         Stage stage = (Stage)Exit.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * change the color of the exit button
+     * @param event event of the mouse click
+     */
     @FXML
     public void exitBtnToRed(MouseEvent event){
         Exit.setTextFill(Paint.valueOf("Red"));
     }
 
+    /**
+     * change the color of the exit button
+     * @param event event of the mouse click
+     */
     @FXML
     public void exitBtnToPurple(MouseEvent event){
         Exit.setTextFill(Paint.valueOf("#3F2B63"));
     }
 
+    /**
+     * remind the teacher of the default account and password
+     * @param event event of the mouse click
+     */
     @FXML
     public void forgotRemindTeacher(MouseEvent event) {
         TrayNotification tray = new TrayNotification();
@@ -284,6 +333,10 @@ public class LoginViewController implements Initializable {
         tray.showAndDismiss(Duration.millis(3000));
     }
 
+    /**
+     * remind the student of the default account and password
+     * @param event event of the mouse click
+     */
     @FXML
     public void forgotRemindStudent(MouseEvent event) {
         TrayNotification tray = new TrayNotification();
@@ -297,6 +350,10 @@ public class LoginViewController implements Initializable {
     }
 
 
+    /**
+     * set the controller of the student main page
+     * @param controller the controller of the student main page
+     */
     public void setParentControllerStudent(StudentMainViewController controller) {
         studentMainViewController = controller;
     }

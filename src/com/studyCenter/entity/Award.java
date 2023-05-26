@@ -7,16 +7,16 @@ import java.io.Serializable;
 
 public class Award implements Serializable {
     public final static String[] TYPES = {"A", "B", "C"};
-//    private ArrayList<Problem> problems = new ArrayList<Problem>();
+//    private ArrayList<Award> problems = new ArrayList<Award>();
     private String name = "";
     private String type = "A";
     private long id = 0;
 
-//    public ArrayList<Problem> getProblems() {
+//    public ArrayList<Award> getAwards() {
 //        return problems;
 //    }
 
-//    public void setProblems(ArrayList<Problem> problems) {
+//    public void setAwards(ArrayList<Award> problems) {
 //        this.problems = problems;
 //    }
 

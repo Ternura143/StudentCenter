@@ -19,6 +19,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * controller of the showAwardView.fxml
+ */
 public class ShowAwardViewController implements Initializable {
     @FXML
     private TableView<AwardShow> tableView;
@@ -37,22 +40,38 @@ public class ShowAwardViewController implements Initializable {
 
     private NewAwardViewController newAwardViewController;
 
+    /**
+     * set the parent controller of the new window
+     * @param controller the controller of the new window
+     */
     public void setParentController(AwardManagementViewController controller) {
         awardManagementViewController = controller;
     }
 
+    /**
+     * set the parent controller of the new window
+     * @param controller the controller of the new window
+     */
     public void setParentControllerNewAward(NewAwardViewController controller) {
         newAwardViewController = controller;
     }
 
+    /**
+     * open a new window to create a new award show and close the current window
+     * @param event mouse event of the button clicked 
+     */
     @FXML
-    public void newProblem(MouseEvent event) {
+    public void newAward(MouseEvent event) {
         NewAwardViewController controller = (NewAwardViewController) ViewManager.newWindow("newAwardView.fxml");
         controller.setParentController(this);
         Stage currentStage = (Stage) exitLabel.getScene().getWindow();
         currentStage.close();
     }
 
+    /**
+     * delete the selected award show from the database and refresh the table view
+     * @param event mouse event of the button clicked
+     */
     @FXML
     public void close(MouseEvent event) {
         AwardManagementViewController controller = (AwardManagementViewController) ViewManager.newWindow("awardManagementView.fxml");
@@ -62,6 +81,11 @@ public class ShowAwardViewController implements Initializable {
     }
 
 
+    /**
+     * initialize the table view
+     * @param location location of the .fxml file  to be loaded by FXMLLoader
+     * @param resources resources to be used by FXMLLoader
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

@@ -19,9 +19,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
- * @className: AwardManagementViewController
- * @description: the controller of the award management page
-
+ * The controller of the award management page of the student
  */
 public class AwardManagementViewController implements Initializable {
     @FXML
@@ -46,27 +44,24 @@ public class AwardManagementViewController implements Initializable {
 
 
     /**
-     * @param controller
-     * @return void
-     * @description set the parent controller of the award management page
+     * set the parent controller of the award management page
+     * @param controller the controller of the main page
      */
     public void setParentController(StudentMainViewController controller) {
         studentMainViewController = controller;
     }
 
     /**
-     * @param controller
-     * @return void
-     * @description set the parent controller of the show award page
+     * set the parent controller of the show award page
+     * @param controller the controller of the show award page
      */
     public void setParentControllerShow(ShowAwardViewController controller) {
         showAwardViewController = controller;
     }
 
     /**
-     * @param event
-     * @return void
-     * @description back to the main page
+     * back to the main page
+     * @param event the mouse event
      */
     public void backToMainPage(MouseEvent event) {
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
@@ -76,10 +71,9 @@ public class AwardManagementViewController implements Initializable {
     }
 
     /**
-     * @param location
-     * @param resources
-     * @return void
-     * @description initialize the table view of the award management page
+     * initialize the table view of the award management page
+     * @param location the location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resources resources used to localize the root object, or null if the root object was not localized.
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -94,9 +88,8 @@ public class AwardManagementViewController implements Initializable {
     }
 
     /**
-     * @param event
-     * @return void
-     * @description delete the selected award
+     * delete the selected award
+     * @param event the mouse event
      */
     @FXML
     public void delAward(MouseEvent event) {
@@ -113,15 +106,14 @@ public class AwardManagementViewController implements Initializable {
             }
         } else {
             Alert nullWarning = new Alert(Alert.AlertType.ERROR, "Please select at least one award in the form!");
-            nullWarning.setHeaderText("None of the awards selected！");
+            nullWarning.setHeaderText("None of the awards selected");
             nullWarning.show();
         }
     }
 
     /**
-     * @param event
-     * @return void
-     * @description show the selected award
+     * show the selected award
+     * @param event the mouse event
      */
     @FXML
     public void showAward(MouseEvent event) {

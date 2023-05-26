@@ -12,7 +12,7 @@ public class UserManager {
     private AbstractUser currentUser;
     private static UserManager singletonInstance;
 
-    //实现单例模式
+    //Singleton Pattern
     public static UserManager getInstance() {
         if (singletonInstance == null) {
             singletonInstance = new UserManager();

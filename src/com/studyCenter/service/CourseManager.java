@@ -13,20 +13,20 @@ public class CourseManager implements AbstractCourse {
         courses = FileOperator.loadData("Courses.json", Course.class);
     }
 
-    //单例模式
+    //Singleton Pattern
     public static CourseManager getInstance() {
         if (singletonInstance == null) {
             singletonInstance = new CourseManager();
         }
         return singletonInstance;
     }
-    //增
+    //Add
     public boolean addCourse(Course course) {
         courses.add(course);
         FileOperator.writeData(course, "Courses.json");
         return true;
     }
-    //删
+    //Delete
     public void removeCourse(Course course) {
         courses.remove(course);
         FileOperator.writeData(courses, "Courses.json");

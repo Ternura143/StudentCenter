@@ -24,20 +24,20 @@ public class AwardManager implements AbstractAward {
         awards = FileOperator.loadData("Awards.json", Course.class);
     }
 
-    //单例模式
+    //Singleton Pattern
     public static AwardManager getInstance() {
         if (singletonInstance == null) {
             singletonInstance = new AwardManager();
         }
         return singletonInstance;
     }
-    //增
+    //Add
     public boolean addAward(Award award) {
         awards.add(award);
         FileOperator.writeData(award, "Awards.json");
         return true;
     }
-    //删
+    //Delete
     public void removeAward(Award award) {
         awards.remove(award);
         FileOperator.writeData(awards, "Awards.json");

@@ -14,20 +14,20 @@ public class AwardShowManager implements AbstractTSM {
             awards = FileOperator.loadData("AwardShows.json", AwardShow.class);
         }
 
-        //单例模式
+        //Singleton Pattern
         public static AwardShowManager getInstance() {
             if (singletonInstance == null) {
                 singletonInstance = new AwardShowManager();
             }
             return singletonInstance;
         }
-        //增
+        //Add
         public boolean addAwardShow(AwardShow award) {
             awards.add(award);
             FileOperator.writeData(award, "AwardShows.json");
             return true;
         }
-        //删
+        //Delete
         public void removeAwardShow(AwardShow award) {
             awards.remove(award);
             FileOperator.writeData(awards, "AwardShows.json");

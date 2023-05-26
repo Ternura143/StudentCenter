@@ -13,6 +13,10 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+* the controller of the course setting page
+*/
+
 public class CourseSettingViewController implements Initializable {
     @FXML
     private TextField courseNameField;
@@ -33,10 +37,18 @@ public class CourseSettingViewController implements Initializable {
     private CourseManagementViewController courseManagementViewController;
     private Course inCourse;
 
+    /**
+     * set the parent controller of the course setting page
+     * @param controller the parent controller of the course setting page
+     */
     public void setParentController(CourseManagementViewController controller) {
         courseManagementViewController = controller;
     }
 
+    /**
+     * save the course information and close the page when the save button is clicked
+     * @param event the mouse event of the save button being clicked
+     */
     @FXML
     void saveHandled(MouseEvent event) {
         String courseName = courseNameField.getText();
@@ -68,11 +80,20 @@ public class CourseSettingViewController implements Initializable {
         }
     }
 
+    /**
+     * close the page when the cancel button is clicked
+     * @param location the URL of the course setting page
+     *@param resources the resource bundle of the course setting page
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<Type> typeObservableList = FXCollections.observableArrayList();
     }
 
+    /**
+     * set the course information
+     * @param course the course to be set
+     */
     public void setCourse(Course course) {
         inCourse = course;
         courseNameField.setText(course.getCourseName());
@@ -82,6 +103,10 @@ public class CourseSettingViewController implements Initializable {
         scoreField.setText(course.getScore());
     }
 
+    /**
+     * close the page when the exit button is clicked
+     * @param event the mouse event of the exit button being clicked
+     */
     @FXML
     void close(MouseEvent event) {
         Stage currentStage = (Stage) exitLabel.getScene().getWindow();

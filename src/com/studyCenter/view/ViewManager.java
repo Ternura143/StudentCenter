@@ -9,12 +9,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Objects;
-/*
- * @Author DengYimo
- * @Date  4:30
- * @Description 此类用于不同界面的跳转，controller注入法。
- * @Since version-1.0
- */
+
 public class ViewManager {
     private static double yOffSet;
     private static double xOffSet;
@@ -41,14 +36,7 @@ public class ViewManager {
         }
         return loader.getController();
     }
-/*
- * @Author DengYimo
- * @Date  4:33
- * @Description This is description of method
- * @Param [fxmlFileName]
- * @Return javafx.scene.layout.AnchorPane
- * @Since version-1.0
- */
+
     public static AnchorPane getPane(String fxmlFileName) {
         AnchorPane pane = null;
         try {

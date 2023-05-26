@@ -5,11 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-/*
- * @Author DengYimo
- * @Date  5:03
- * @Description 这是Student主页面
- * @Since version-1.0
+
+/**
+controller of the studentMainView.fxml
  */
 public class StudentMainViewController {
     @FXML
@@ -34,43 +32,63 @@ public class StudentMainViewController {
     private ProjectViewController projectViewController;
     private AwardManagementViewController awardManagementViewController;
     private StudyRoomManagementViewController studyRoomManagementViewController;
-//    private BuildingMainViewController buildingMainViewController;
-//    private CheckInInfoViewController checkInInfoViewController;
 
+
+    /**
+     * set the parent controller of the login view
+     * @param controller the controller of the login view
+     */
     public void setParentControllerLogin(LoginViewController controller) {
         loginViewController = controller;
     }
 
+    /**
+     * set the parent controller of the course view
+     * @param controller the controller of the course view
+     */
     public void setParentControllerCourseManagement(CourseManagementViewController controller) {
         courseManagementViewController = controller;
     }
 
+    /**
+     * set the parent controller of the award view
+     * @param controller the controller of the award view
+     */
     public void setParentControllerAwardManagement(AwardManagementViewController controller) {
         awardManagementViewController = controller;
     }
 
+    /**
+     * set the parent controller of the new window
+     * @param controller the controller of the project view
+     */
     public void setParentControllerProject(ProjectViewController controller) {
         projectViewController = controller;
     }
 
+    /**
+     * set the parent controller of the new window
+     * @param controller the controller of the study room view
+     */
     public void setParentControllerStudyRoom(StudyRoomManagementViewController controller) {
         studyRoomManagementViewController = controller;
     }
 
-//    public void setParentControllerBuilding(BuildingMainViewController controller) {
-//        buildingMainViewController = controller;
-//    }
 
-//    public void setParentControllerCheckIn(CheckInInfoViewController controller) {
-//        checkInInfoViewController = controller;
-//    }
-
+    /**
+     * go to the exit view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void exitButton(MouseEvent event) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * go to the logout view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void logoutButton(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
@@ -79,6 +97,10 @@ public class StudentMainViewController {
         controller.setParentControllerStudent(this);
     }
 
+    /**
+     * go to the course management view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void goToCourseManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
@@ -87,6 +109,10 @@ public class StudentMainViewController {
         controller.setParentController(this);
     }
 
+    /**
+     * go to the other management view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void goToOtherManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
@@ -95,6 +121,10 @@ public class StudentMainViewController {
         controller.setParentController(this);
     }
 
+    /**
+     * go to the award management view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void goToAwardManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
@@ -103,6 +133,10 @@ public class StudentMainViewController {
         controller.setParentController(this);
     }
 
+    /**
+     * go to the study room management view
+     * @param event the mouse event of the button clicked
+     */
     @FXML
     public void goToStudyRoomManagement(MouseEvent event) {
         Stage stage = (Stage) logoutBtn.getScene().getWindow();
@@ -111,20 +145,11 @@ public class StudentMainViewController {
         controller.setParentController(this);
     }
 
-//    @FXML
-//    public void goToBuildingManagement(MouseEvent event) {
-//        Stage stage = (Stage) logoutBtn.getScene().getWindow();
-//        stage.close();
-////        BuildingMainViewController controller = (BuildingMainViewController) ViewManager.newWindow("buildingMainView.fxml");
-////        controller.setParentController(this);
-//    }
 
-//    @FXML
-//    public void goToCheckInInfoManagement(MouseEvent event) {
-//        Stage stage = (Stage) logoutBtn.getScene().getWindow();
-//        stage.close();
-//    }
-
+    /**
+     * go to the login view
+     * @param loginViewController the controller of the new window
+     */
     public void setLoginViewController(LoginViewController loginViewController) {
         this.loginViewController = loginViewController;
     }

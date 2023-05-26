@@ -30,6 +30,9 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
+/**
+ * the controller of the study room management page
+ */
 public class StudyRoomManagementViewController implements Initializable {
     private ObservableList<Room> studyRoomList = FXCollections.observableArrayList();
     @FXML
@@ -49,6 +52,10 @@ public class StudyRoomManagementViewController implements Initializable {
         studentMainViewController = controller;
     }
 
+    /**
+     * click the back button to return to the main page.
+     * @param event click the back button
+     */
     @FXML
     public void backToMainPage(MouseEvent event) {
         StudentMainViewController controller = (StudentMainViewController) ViewManager.newWindow("studentMainView.fxml");
@@ -57,6 +64,10 @@ public class StudyRoomManagementViewController implements Initializable {
         currentStage.close();
     }
 
+    /**
+     * click the search button to search the study room.
+     * @param event click the search button
+     */
     @FXML
     private void studySearchFieldKeyPressed(KeyEvent event) {
         if(event.getCode() == KeyCode.ENTER) {
@@ -64,6 +75,10 @@ public class StudyRoomManagementViewController implements Initializable {
         }
     }
 
+    /**
+     * set the list of study room and the choice box of course
+     * @return void
+     */
     @FXML
     private void studyRoomSearchButtonFired() {
         if(studySearchField.getText().equals("")) {
@@ -87,10 +102,20 @@ public class StudyRoomManagementViewController implements Initializable {
         }
         studyRoomList.setAll(rooms);
     }
+
+    /**
+     * refresh the study room management view
+     * @return void
+     */
     @FXML
     private void studyRoomRefresh() {
         initialize(null,null);
     }
+
+    /**
+     * alert that the application is unsuccessful
+     * @return void
+     */
     @FXML
     private void studyRoomApplicationButtonFired() {
         if(studyTableView.getSelectionModel().getSelectedItem() == null) {
@@ -111,8 +136,6 @@ public class StudyRoomManagementViewController implements Initializable {
         Room room = studyTableView.getSelectionModel().getSelectedItem();
         Course course = studyAplicationCourseChoice.getSelectionModel().getSelectedItem();
         long time = Long.parseLong(studyApplicationTimeField.getText()) * StudyRoomApplication.TIMESCALE;
-//    	room.getApplicationList().add(e);
-//    	if(room)
         room.refreshApplicationTime();
         if(room.getApplicationList().size() >= room.getMaxCapacity()) {
             long mintime = Long.MAX_VALUE;
@@ -137,10 +160,14 @@ public class StudyRoomManagementViewController implements Initializable {
         Database.saveToFile();
     }
 
+    /**
+     * initialize the study room management view
+     * @param location the location used to resolve relative paths for the root object, or null if the location is not known
+     *                 to resolve relative paths for the root object, or null if the location is not known
+     * @param resources the resources used to localize the root object, or null if the root object was not localized
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //初始化表格
-        //[start]
         studySearchField.setText("");
         studyApplicationTimeField.setText("");
         studyRoomList.clear();
@@ -164,7 +191,6 @@ public class StudyRoomManagementViewController implements Initializable {
 
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Room, String> param) {
-                // TODO Auto-generated method stub
                 SimpleStringProperty str = new SimpleStringProperty();
                 str.setValue(param.getValue().getType(param.getValue().getStudyType()));
                 return str;
@@ -174,7 +200,6 @@ public class StudyRoomManagementViewController implements Initializable {
 
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Room, String> param) {
-                // TODO Auto-generated method stub
                 SimpleStringProperty str = new SimpleStringProperty();
                 Room room = param.getValue();
                 Level level = room.getFather();
@@ -189,7 +214,6 @@ public class StudyRoomManagementViewController implements Initializable {
 
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Room, String> param) {
-                // TODO Auto-generated method stub
 
                 return new SimpleStringProperty(String.valueOf(param.getValue().getMaxCapacity()));
             }
@@ -198,7 +222,6 @@ public class StudyRoomManagementViewController implements Initializable {
 
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Room, String> param) {
-                // TODO Auto-generated method stub
 
                 return new SimpleStringProperty(String.valueOf(param.getValue().getResCapacity()));
             }
@@ -220,15 +243,13 @@ public class StudyRoomManagementViewController implements Initializable {
                 return null;
             }
         });
-        //初始化choicebox
         studyAplicationCourseChoice.getItems().setAll(CourseManager.getInstance().getCourses());
-        //输入框监听器
-//    	studyAplicationCourseChoice.set
+
         studyApplicationTimeField.textProperty().addListener(new ChangeListener<String>() {
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
+
                 if(newValue == null) return ;
                 if(!Pattern.matches("[0-9]{0,6}", newValue)) {
                     studyApplicationTimeField.setText(oldValue);

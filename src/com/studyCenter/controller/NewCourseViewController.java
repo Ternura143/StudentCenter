@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * the controller of the new course view page
+ */
 public class NewCourseViewController implements Initializable {
     @FXML
     private TextField courseNameField;
@@ -30,10 +33,25 @@ public class NewCourseViewController implements Initializable {
     private CourseManagementViewController courseManagementViewController;
     private Course inCourse;
 
+    /**
+     * set the course to be edited on the new course view page
+     * @param controller the course management view controller
+     */
     public void setParentController(CourseManagementViewController controller) {
         courseManagementViewController = controller;
     }
 
+    /**
+     * save the new course information to the course list
+     * if the course is already in the list, remove it first and then add the new one
+     * if the course information is incomplete, show a warning
+     * if the agreement is not checked, show a warning
+     * if the course is added successfully, show a information
+     * close the current window
+     * refresh the course list on course management view page
+     * close the current window
+     * @param event mouse event of save button clicked on new course view page
+     */
     @FXML
     public void saveHandled(MouseEvent event) {
         String courseName = courseNameField.getText();
@@ -65,12 +83,21 @@ public class NewCourseViewController implements Initializable {
         }
     }
 
+    /**
+     * close the current window
+     * @param event mouse event of cancel button clicked on new course view page
+     */
     @FXML
     public void close(MouseEvent event) {
         Stage currentStage = (Stage) exitLabel.getScene().getWindow();
         currentStage.close();
     }
 
+    /**
+     * set the course to be edited on the new course view page
+     * @param location  the location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resources the resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }

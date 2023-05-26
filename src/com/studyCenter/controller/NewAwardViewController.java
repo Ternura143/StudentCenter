@@ -15,13 +15,11 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-/*
- * @Author DengYimo
- * @Date  5:01
- * @Description 这是Student新建Student界面的控制器类
- * @Since version-1.0
+
+/**
+ * controller for new award show window
  */
-public class   NewAwardViewController implements Initializable {
+public class NewAwardViewController implements Initializable {
     @FXML
     private TextField idField;
     @FXML
@@ -39,14 +37,26 @@ public class   NewAwardViewController implements Initializable {
 
     private ShowAwardViewController showAwardViewController;
 
+    /**
+     * set parent controller
+     * @param controller ShowAwardViewController
+     */
     public void setParentController(ShowAwardViewController controller) {
         showAwardViewController = controller;
     }
 
+    /**
+     * initialize the controller
+     * @param location  URL location
+     * @param resources ResourceBundle resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
 
+    /**
+     * close the window
+     */
     @FXML
     void close() {
         ShowAwardViewController controller = (ShowAwardViewController) ViewManager.newWindow("ShowAwardView.fxml");
@@ -55,6 +65,10 @@ public class   NewAwardViewController implements Initializable {
         currentStage.close();
     }
 
+    /**
+     * clear the text
+     * @param event MouseEvent event
+     */
     @FXML
     void clearText(MouseEvent event) {
         idField.setText("");
@@ -62,6 +76,10 @@ public class   NewAwardViewController implements Initializable {
         modeField.setText("");
     }
 
+    /**
+     * save the new award show
+     * @param event MouseEvent event
+     */
     @FXML
     void registHandled(MouseEvent event) {
         String id = idField.getText();

@@ -13,20 +13,20 @@ public class MLSManager {
         modelListShowList = FileOperator.loadData("ModelListShows.json", ModelListShow.class);
     }
 
-    //单例模式
+    //Singleton Pattern
     public static MLSManager getInstance() {
         if (singletonInstance == null) {
             singletonInstance = new MLSManager();
         }
         return singletonInstance;
     }
-    //增
+    //Add
     public boolean addModelListShow(ModelListShow modelListShow) {
         modelListShowList.add(modelListShow);
         FileOperator.writeData(modelListShow, "ModelListShows.json");
         return true;
     }
-    //删
+    //Delete
     public void removeModelListShow(ModelListShow modelListShow) {
         modelListShowList.remove(modelListShow);
         FileOperator.writeData(modelListShowList, "ModelListShows.json");
